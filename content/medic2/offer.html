@@ -1,85 +1,194 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
-<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
-<!--[if gt IE 8]><!-->
+<!--[if lt IE 7]>
+	<html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7">
+	<![endif]-->
+<!--[if IE 7]>
+		<html class="no-js lt-ie10 lt-ie9 lt-ie8">
+		<![endif]-->
+<!--[if IE 8]>
+			<html class="no-js lt-ie10 lt-ie9">
+			<![endif]-->
+<!--[if IE 9]>
+				<html class="no-js lt-ie10">
+				<![endif]-->
+<!--[if gt IE 8]>
+					<!-->
 <html class="no-js">
 <!--<![endif]-->
 
 <head>
-
-    <!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <title>Be</title>
+    <title>
+        Be
+    </title>
     <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- Favicons -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon.ico">
-
-    <!-- FONTS -->
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Quattrocento:300,400,400italic,700,700italic'>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,400italic,700,700italic'>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400'>
-
-    <!-- CSS -->
     <link rel='stylesheet' href='../../css/global.css'>
     <link rel='stylesheet' href='css/structure.css'>
     <link rel='stylesheet' href='css/medic2.css'>
     <link rel='stylesheet' href='css/custom.css'>
-
+    <style>
+		
+	
+		
+        .helper_content { position: relative; } #Wrapper { transition: height
+        		0.3s ease; } @media (max-width: 768px) { /* Asegura que el contenido y
+        		la imagen se apilen verticalmente */ .helper_content .item-1 .acomodo {
+        		display: flex; flex-direction: column; } /* Ajusta el ancho de la imagen
+        		para móviles */ .helper_content .image_frame { width: 100%; margin-top:
+        		20px; } /* Asegura que la imagen sea responsiva */ .helper_content .image_frame
+        		}
+        		
+        	/* Estilos para el slideshow de carillas */
+        #contenedor-slideshow , #contenedor-slideshow1{
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: block;
+            max-width: 100%;
+        }
+        
+        #contenedor-slideshow .slide ,
+        #contenedor-slideshow1 .slide1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            z-index: 0;
+            display: block;
+        }
+        
+        #contenedor-slideshow .slide.activa ,
+        #contenedor-slideshow1 .slide1.activa {
+            opacity: 1;
+            z-index: 1;
+        }
+        
+        
+        
+        
+        
+        
+		.image_frame .image_wrapper #contenedor-slideshow, 
+		.image_frame .image_wrapper #contenedor-slideshow1 {
+			padding-bottom: 100%;
+			height: 0;
+		}
+        
+        
+        
+        
+		#contenedor-slideshow .slide, 
+		#contenedor-slideshow1 .slide1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+        
+        
+        /* Ajustes para móviles */
+        @media (max-width: 768px) {
+            .image_frame #contenedor-slideshow {
+                padding-bottom: 100%; /* Relación de aspecto cuadrado para móviles */
+            }
+            
+            #contenedor-slideshow .slide ,
+            #contenedor-slideshow1 .slide1 {
+                object-fit: contain;
+                background-color: #black;
+            }
+        }
+    </style>
 </head>
 
 <body class="layout-boxed nice-scroll-on mobile-tb-hide button-stroke no-content-padding header-classic header-boxed minimalist-header-no sticky-header sticky-white ab-hide subheader-both-center menuo-no-borders menuo-right logo-no-margin logo-no-sticky-padding footer-copy-center">
     <div id="Wrapper">
         <div id="Header_wrapper">
             <header id="Header">
-                <div class="header_placeholder"></div>
+                <div class="header_placeholder">
+                </div>
                 <div id="Top_bar">
                     <div class="container">
                         <div class="column one">
                             <div class="top_bar_left clearfix">
                                 <div class="logo">
-                                    <a id="logo" href="#" title="BeMedic 2 - BeTheme"><img class="logo-main scale-with-grid" src="../../img/logo.png" /><img class="logo-sticky scale-with-grid" src="../../img/logo.png" /><img class="logo-mobile scale-with-grid" src="../../img/logo.png" />
+                                    <a id="logo" href="#" title="BeMedic 2 - BeTheme">
+                                        <img class="logo-main scale-with-grid" src="../../img/logo.png" />
+                                        <img class="logo-sticky scale-with-grid" src="../../img/logo.png" />
+                                        <img class="logo-mobile scale-with-grid" src="../../img/logo.png" />
                                     </a>
                                 </div>
                                 <div class="menu_wrapper">
                                     <nav id="menu" class="menu-main-menu-container">
                                         <ul id="menu-main-menu" class="menu">
                                             <li>
-                                                <a href="../../index-medic2.html"><span>INICIO</span></a> </li>
+                                                <a href="../../index-medic2.html">
+                                                    <span>
+														INICIO
+													</span>
+                                                </a>
+                                            </li>
                                             <li>
-                                                <a href="our-centre.html"><span>CLÍNICA</span></a> </li>
+                                                <a href="our-centre.html">
+                                                    <span>
+														CLÍNICA
+													</span>
+                                                </a>
+                                            </li>
                                             <li class="menu-item menu-item-object-page current-menu-item page_item current_page_item">
-                                                <a href="offer.html"><span>SERVICIOS</span></a> </li>
+                                                <a href="offer.html">
+                                                    <span>
+														SERVICIOS
+													</span>
+                                                </a>
+                                            </li>
                                             <li>
-                                                <a href="staff.html"><span>EQUIPO</span></a> </li>
+                                                <a href="staff.html">
+                                                    <span>
+														EQUIPO
+													</span>
+                                                </a>
+                                            </li>
                                             <li>
-                                                <a href="blog.html"><span>BLOG</span></a> </li>
+                                                <a href="blog.html">
+                                                    <span>
+														BLOG
+													</span>
+                                                </a>
+                                            </li>
                                             <li>
-                                                <a href="contact.html"><span>CONTÁCTANOS</span></a>
-                                           	</li>
-                                           	<li>
-                                            	<a href="bolsa.html"><span>CONTRATACIÓN</span></a>
-                                           	</li>
-
-                                           	
+                                                <a href="contact.html">
+                                                    <span>
+														CONTÁCTANOS
+													</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="bolsa.html">
+                                                    <span>
+														CONTRATACIÓN
+													</span>
+                                                </a>
+                                            </li>
                                         </ul>
-                                    </nav><a class="responsive-menu-toggle" href="#"><i class="icon-menu"></i></a> </div>
-                                <div class="secondary_menu_wrapper"></div>
-                                <div class="banner_wrapper"></div>
-                                <div class="search_wrapper">
-                                    <form method="get">
-                                        <i class="icon_search icon-search"></i><a href="#" class="icon_close"><i class="icon-cancel"></i></a>
-                                        <input type="text" class="field" name="s" id="s" placeholder="Enter your search" />
-                                        <input type="submit" class="submit" value="" style="display:none;" />
-                                    </form>
+                                    </nav>
+                                    <a class="responsive-menu-toggle" href="#">
+                                        <i class="icon-menu">
+										</i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +198,15 @@
             <div id="Subheader" style="padding:100px 0;">
                 <div class="container">
                     <div class="column one">
-                        <h1 class="title">SERVICIOS Y TRATAMIENTOS</h1>
+                        <h1 class="title">
+                            SERVICIOS Y TRATAMIENTOS
+                        </h1>
+                        <hr class="no_line" style="margin: 0 auto 25px;" />
+                        <h3 style="text-align:center; color:#72685a; font-weight: 150;
+						font-size: 25px;
+						line-height: 32px">
+                            Tu sonrisa merece un diagnóstico experto, no una suposición.
+                            </h3>
                     </div>
                 </div>
             </div>
@@ -98,13 +215,17 @@
             <div class="content_wrapper clearfix">
                 <div class="sections_group">
                     <div class="entry-content">
-                        <div class="section mcb-section" style="padding-top:50px; padding-bottom:20px;">
+
+                        <div class="section mcb-section" style="padding-top:64px; padding-bottom:64px;">
                             <div class="section_wrapper mcb-section-inner">
                                 <div class="wrap mcb-wrap one  valign-top clearfix">
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column">
                                             <div class="column_attr">
-                                                <h4>ODONTOLOGÍA GENERAL</h4>
+                                                <h4>
+                                                    Consulta de valoración
+                                                </h4>
+                                                <p style="padding-left:15px">Sólo con previa cita</p>
                                             </div>
                                         </div>
                                     </div>
@@ -112,36 +233,56 @@
                                 <div class="wrap column-margin-10px valign-top clearfix">
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_helper">
-                                            <div class="helper">
-                                                <div class="helper_header">
-                                                    <h5 class="title">Información</h5>
-                                                    <div class="links">
-                                                        <a class="link link-1 toggle" href="#" data-rel="1"><i class="fa-solid fa-chevron-down"></i></a> </div>
-                                                </div>
-                                                <div class="helper_content">
-                                                    <div class="item item-1">
-                                                        <div class="acomodo">
-                                                            <div class="content-wrapper">
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>INCLUYE</h5>
-                                                                <p>
-                                                                    Limpiezas dentales, resinas (empastes), extracciones simples, revisiones y educación sobre higiene bucal. </p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>BENEFICIOS</h5>
-                                                                <p>
-                                                                Prevención de enfermedades, mantenimiento de encías y dientes sanos, tratamientos conservadores y mínimamente invasivos.</p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>DETALLES</h5>
-                                                                <p class="big themecolor">
-                                                                    <i class="fa-regular fa-circle"></i> Diasgnóstico bucal, <i class="fa-regular fa-circle"></i> Cuidados adecuados, <i class="fa-regular fa-circle"></i> Visitas regulares </p>
-                                                                <h5 style="text-align: right; font-weight: 700;">PRECIO <span class="themecolor">$950 POR PROCEDIMIENTO</span></h5>
+                                            <div class="helper_content">
+                                                <div class="item item-1">
+                                                    <div class="acomodo">
+                                                        <!-- Contenido -->
+                                                        <div class="content-wrapper" style="width:80% ;background-color:#fafafa; padding:15px">
+                                                            <h5>
+                                                                Incluye:
+                                                            </h5>
+                                                            <p class="themecolor big">
+                                                                <i class="fa-regular fa-circle"></i> Expediente clínico digital
+                                                                <br>
+                                                                <i class="fa-regular fa-circle"></i> Fotografías de estudio
+                                                                <br>
+                                                                <i class="fa-regular fa-circle"></i> Escaneo 3D
+                                                                <br>
+                                                                <i class="fa-regular fa-circle"></i> Radiografías periapicales
+                                                                <br>
+                                                                <i class="fa-regular fa-circle"></i> Plan de tratamiento personalizado
+                                                                <br>
+                                                                <i class="fa-regular fa-circle"></i> Alternativas y presupuesto
+                                                                <br>
+                                                                <i class="fa-regular fa-circle"></i> Plan de pagos
+                                                            </p>
+                                                            <h5>
+                                                                Duración
+                                                            </h5>
+                                                            <p>
+                                                                1 hora 30 minutos
+                                                            </p>
+                                                            <h5>
+                                                                Costo
+                                                            </h5>
+                                                            <p class="big">
+                                                                $990 MXN
+                                                            </p>
+                                                            <p>
+                                                                (Costo 2025)
+                                                            </p>
+                                                            <h5>
+                                                                No se atienden pacientes sin valoración.
+                                                            </h5>
+
+                                                        </div>
+                                                        <!-- Imagen -->
+                                                        <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
+                                                            <div class="image_wrapper">
+                                                                <img class="scale-with-grid" src="../../img/clinica - copia.jpg" width="780" height="600" />
                                                             </div>
-                                                            <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                                <div class="image_wrapper"><img class="scale-with-grid" src="../../img/offer-1.jpg" width="780" height="600" /> </div>
-                                                            </div> 
                                                         </div>
                                                     </div>
-                                                    <div class="item item-2"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -149,13 +290,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="section mcb-section" style="padding-top:30px; padding-bottom:20px;">
+
+                        <hr class="no_line" style="height:15px;background-color:#eee" />
+
+                        <div class="section mcb-section" style="padding-top:64px; padding-bottom:64px;">
                             <div class="section_wrapper mcb-section-inner">
                                 <div class="wrap mcb-wrap one  valign-top clearfix">
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column">
                                             <div class="column_attr">
-                                                <h4>DISEÑO DE SONRISA "CARILLAS DR. ARCE"</h4>
+                                                <h4>
+                                                    Diseño de Sonrisa "Carillas Dr. Arce"
+                                                </h4>
                                             </div>
                                         </div>
                                     </div>
@@ -163,36 +309,48 @@
                                 <div class="wrap column-margin-10px valign-top clearfix">
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_helper">
-                                            <div class="helper">
-                                                <div class="helper_header">
-                                                    <h5 class="title">Información</h5>
-                                                    <div class="links">
-                                                        <a class="link link-1 toggle" href="#" data-rel="1"><i class="fa-solid fa-chevron-down"></i></a> </div>
-                                                </div>
-                                                <div class="helper_content">
-                                                    <div class="item item-1">
-                                                        <div class="acomodo">
-                                                            <div class="content-wrapper">
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>DURACIÓN DEL MATERIAL</h5>
-                                                                <p>
-                                                                    Aproximado entre 10-30 años. (Toda vez que el paciente sea responsable con sus cuidados de higiene, indicaciones específicas y acuda mínimo cada 6 meses a visita con el médico) </p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>BENEFICIOS</h5>
-                                                                <p>
-                                                                Tienen la misma resistencia que el esmalte, No se necesita desgastar el diente 360 grados, No tienen un cambio de color y/o pigmentación.</p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>DETALLES</h5>
-                                                                <p class="big themecolor">
-                                                                    <i class="fa-regular fa-circle"></i> Material de Cerámica E.max, <i class="fa-regular fa-circle"></i> Alta duración, <i class="fa-regular fa-circle"></i> Facíl cuidado </p>
-                                                                <h5 style="text-align: right; font-weight: 700;">PRECIO <span class="themecolor">$7,590 POR DIENTE</span></h5>
+                                            <div class="helper_content">
+                                                <div class="item item-1">
+                                                    <div class="acomodo">
+                                                        <div class="content-wrapper" style="width:80% ;background-color:#fafafa; padding:15px">
+                                                            <h5>
+                                                                Material
+                                                            </h5>
+                                                            <p>
+                                                                Cerámica E.max
+                                                            </p>
+                                                            <h5>
+                                                                Costo
+                                                            </h5>
+                                                            <p>
+                                                                Desde: <b>$7,590</b> por diente (Costo 2025)
+                                                            </p>
+                                                            <h5>
+                                                                Duración
+                                                            </h5>
+                                                            <p>
+                                                                10–30 años (con buenos cuidados e higiene)
+                                                            </p>
+                                                            <h5>
+                                                                Beneficios
+                                                            </h5>
+                                                            <p class="big themecolor">
+                                                                <i class="fa-regular fa-circle">
+																</i> Resistencia similar al esmalte
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Cuidados adecuados<br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Visitas regulares
+                                                            </p>
+                                                        </div>
+                                                        <!-- Imagen -->
+                                                        <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
+                                                            <div class="image_wrapper">
+                                                                <div id="contenedor-slideshow"></div>
                                                             </div>
-                                                            <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                                <div class="image_wrapper"><img class="scale-with-grid" src="../../img/offer-2.jpg" width="780" height="600" /> </div>
-                                                            </div> 
                                                         </div>
                                                     </div>
-                                                    <div class="item item-2"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -200,13 +358,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="section mcb-section" style="padding-top:30px; padding-bottom:50px;">
+
+                        <hr class="no_line" style="height:15px;background-color:#eee" />
+                        <div class="section mcb-section" style="padding-top:64px; padding-bottom:64px;">
                             <div class="section_wrapper mcb-section-inner">
                                 <div class="wrap mcb-wrap one  valign-top clearfix">
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column">
                                             <div class="column_attr">
-                                                <h4>ORTODONCIA</h4>
+                                                <h4>
+                                                    Diseño Digital de Sonrisa
+                                                </h4>
+                                                <p style="padding-left:15px">Tu nueva sonrisa, diseñada contigo.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -214,40 +377,36 @@
                                 <div class="wrap column-margin-10px valign-top clearfix">
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_helper">
-                                            <div class="helper">
-                                                <div class="helper_header">
-                                                    <h5 class="title">Información</h5>
-                                                    <div class="links">
-                                                        <a class="link link-1 toggle" href="#" data-rel="1"><i class="fa-solid fa-chevron-down"></i></a> </div>
-                                                </div>
-                                                <div class="helper_content">
-                                                    <div class="item item-1">
-                                                        <div class="acomodo">
-                                                            <div class="content-wrapper">
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>TIPOS DISPONIBLES</h5>
-                                                                <p>
-                                                                    Brackets metálicos, estéticos (zafiro o cerámica), y alineadores transparentes. </p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>DURACIÓN DEL TRATAMIENTO</h5>
-                                                                <p>
-                                                                    Entre 12 y 24 meses en promedio. </p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>BENEFICIOS</h5>
-                                                                <p>
-                                                                Corrige la posición dental, mejora la mordida, la estética facial y la higiene bucal a largo plazo.</p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>DETALLES</h5>
-                                                                <p class="big themecolor">
-                                                                    <i class="fa-regular fa-circle"></i> Material resistente, <i class="fa-regular fa-circle"></i> Alta duración, <i class="fa-regular fa-circle"></i> Personalización </p>
-                                                                <h5 style="text-align: right; font-weight: 700;">PRECIO <span class="themecolor">$850 MENSUALES (Plan personalizado)</span></h5>
+                                            <div class="helper_content">
+                                                <div class="item item-1">
+                                                    <div class="acomodo">
+                                                        <!-- Contenido -->
+                                                        <div class="content-wrapper" style="width:80% ;background-color:#fafafa; padding:15px">
+                                                            <h5>
+                                                                Proceso:
+                                                            </h5>
+                                                            <p class="themecolor big">
+                                                                <i class="fa-regular fa-circle"></i> Se parte de estudios clínicos y digitales
+                                                                <br>
+                                                                <i class="fa-regular fa-circle"></i> El Dr. Arce diseña contigo la propuesta
+                                                                <br>
+                                                                <i class="fa-regular fa-circle"></i> Visualizas el resultado antes de iniciar
+                                                                <br>
+                                                                <i class="fa-regular fa-circle"></i> Ajustes personalizados antes del tratamiento
+                                                                <br>
+                                                                <i class="fa-regular fa-circle"></i> Ejecución con precisión milimétrica
+                                                                <br>
+                                                                <i class="fa-regular fa-circle"></i> ¡Tú eliges el color de tus carillas cerámicas!
+                                                            </p>
+                                                            <i><em>“Nuestro objetivo no es solo que sonrías mejor, sino que sonrías como tú.” - Dr Arce</em></i>
+                                                        </div>
+                                                        <!-- Imagen -->
+                                                        <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
+                                                            <div class="image_wrapper">
+                                                                <img class="scale-with-grid" src="../../img/servicio2.jpg" width="780" height="600" />
                                                             </div>
-                                                            <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                                <div class="image_wrapper"><img class="scale-with-grid" src="../../img/offer-3.png" width="780" height="600" /> </div>
-                                                            </div> 
                                                         </div>
                                                     </div>
-                                                    <div class="item item-2"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -255,13 +414,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="section mcb-section" style="padding-top:30px; padding-bottom:20px;">
+
+                        <hr class="no_line" style="height:15px; background-color:#eee; margin:0" />
+
+                        <div class="section mcb-section" style="padding-top:64px; padding-bottom:64px;">
                             <div class="section_wrapper mcb-section-inner">
                                 <div class="wrap mcb-wrap one  valign-top clearfix">
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column">
                                             <div class="column_attr">
-                                                <h4>ENDODONCIA</h4>
+                                                <h4>
+                                                    Servicios principales
+                                                </h4>
                                             </div>
                                         </div>
                                     </div>
@@ -269,36 +433,42 @@
                                 <div class="wrap column-margin-10px valign-top clearfix">
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_helper">
-                                            <div class="helper">
-                                                <div class="helper_header">
-                                                    <h5 class="title">Información</h5>
-                                                    <div class="links">
-                                                        <a class="link link-1 toggle" href="#" data-rel="1"><i class="fa-solid fa-chevron-down"></i></a> </div>
-                                                </div>
-                                                <div class="helper_content">
-                                                    <div class="item item-1">
-                                                        <div class="acomodo">
-                                                            <div class="content-wrapper">
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>DURACIÓN DEL TRATAMIENTO</h5>
-                                                                <p>
-                                                                    Resultado duradero, si se restaura adecuadamente. </p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>BENEFICIOS</h5>
-                                                                <p>
-                                                                Salva dientes dañados, elimina el dolor, evita extracciones, y previene infecciones.</p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>DETALLES</h5>
-                                                                <p class="big themecolor">
-                                                                    <i class="fa-regular fa-circle"></i> Material selladores biocompatinles, <i class="fa-regular fa-circle"></i> Técnicas rotatorias</p>
-                                                                <h5 style="text-align: right; font-weight: 700;">PRECIO <span class="themecolor">$3,500 POR LIMPIEZA</span></h5>
+                                            <div class="helper_content">
+                                                <div class="item item-1">
+                                                    <div class="acomodo">
+                                                        <!-- Contenido -->
+                                                        <div class="content-wrapper" style="width:80% ;background-color:#fafafa; padding:15px">
+															<p class="big themecolor">
+                                                                <i class="fa-regular fa-circle">
+																</i> Odontología general
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Diseño de Sonrisa "Carillas Dr. Arce"
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Ortodoncia
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Endodoncia
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Periodoncia
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Implantología
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Cirugía Maxilofacial
+                                                            </p>
+                                                        </div>
+                                                        <!-- Imagen -->
+                                                        <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
+															<div class="image_wrapper">
+																<div id="contenedor-slideshow1">
+																</div>
                                                             </div>
-                                                            <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                                <div class="image_wrapper"><img class="scale-with-grid" src="../../img/offer-4.jpg" width="780" height="600" /> </div>
-                                                            </div> 
                                                         </div>
                                                     </div>
-                                                    <div class="item item-2"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -306,67 +476,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="section mcb-section" style="padding-top:30px; padding-bottom:20px;">
+                        <hr class="no_line" style="height:15px; background-color:#eee; margin:0" />
+                        <div class="section mcb-section" style="padding-top:64px; padding-bottom:64px;">
                             <div class="section_wrapper mcb-section-inner">
                                 <div class="wrap mcb-wrap one  valign-top clearfix">
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column">
                                             <div class="column_attr">
-                                                <h4>PERIODONCIA</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wrap  column-margin-10px valign-top clearfix">
-                                    <div class="mcb-wrap-inner">
-                                        <div class="column mcb-column one column_helper">
-                                            <div class="helper">
-                                                <div class="helper_header">
-                                                    <h5 class="title">Información</h5>
-                                                    <div class="links">
-                                                        <a class="link link-1 toggle" href="#" data-rel="1"><i class="fa-solid fa-chevron-down"></i></a> </div>
-                                                </div>
-                                                <div class="helper_content">
-                                                    <div class="item item-1">
-                                                        <div class="acomodo">
-                                                            <div class="content-wrapper">
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>INCLUYE</h5>
-                                                                <p>Diagnóstico y tratamiento de encías, curetajes, limpieza profunda, mantenimiento periodontal.</p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>DURACIÓN DEL TRATAMIENTO</h5>
-                                                                <p>
-                                                                    Depende del seguimiento; el mantenimiento es clave. </p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>BENEFICIOS</h5>
-                                                                <p>
-                                                                Previene la pérdida dental, reduce la inflamación, elimina sangrado de encías y mejora el aliento.</p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>DETALLES</h5>
-                                                                <p class="big themecolor">
-                                                                    <i class="fa-regular fa-circle"></i> Diagnóstico <i class="fa-regular fa-circle"></i> Limpieza, <i class="fa-regular fa-circle"></i> Mantenimiento </p>
-                                                                <h5 style="text-align: right; font-weight: 700;">PRECIO <span class="themecolor">$1,800 POR CUADRANTE</span></h5>
-                                                            </div>
-                                                            <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                                <div class="image_wrapper"><img class="scale-with-grid" src="../../img/offer-5.jpg" width="780" height="600" /> </div>
-                                                            </div> 
-                                                        </div>
-                                                    </div>
-                                                    <div class="item item-2"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section mcb-section" style="padding-top:30px; padding-bottom:20px;">
-                            <div class="section_wrapper mcb-section-inner">
-                                <div class="wrap mcb-wrap one  valign-top clearfix">
-                                    <div class="mcb-wrap-inner">
-                                        <div class="column mcb-column one column_column">
-                                            <div class="column_attr">
-                                                <h4>IMPLANTOLOGÍA</h4>
+                                                <h4>
+                                                    Beneficios diferenciadores
+                                                </h4>
                                             </div>
                                         </div>
                                     </div>
@@ -374,36 +493,43 @@
                                 <div class="wrap column-margin-10px valign-top clearfix">
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_helper">
-                                            <div class="helper">
-                                                <div class="helper_header">
-                                                    <h5 class="title">Información</h5>
-                                                    <div class="links">
-                                                        <a class="link link-1 toggle" href="#" data-rel="1"><i class="fa-solid fa-chevron-down"></i></a> </div>
-                                                </div>
-                                                <div class="helper_content">
-                                                    <div class="item item-1">
-                                                        <div class="acomodo">
-                                                            <div class="content-wrapper">
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>DURACIÓN DEL IMPLANTE</h5>
-                                                                <p>
-                                                                    Más de 20 años con higiene y controles. </p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>BENEFICIOS</h5>
-                                                                <p>
-                                                                Reemplazo permanente, mejora la masticación, evita la reabsorción ósea, estética natural y sin necesidad de dañar dientes vecinos.</p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>DETALLES</h5>
-                                                                <p class="big themecolor">
-                                                                    <i class="fa-regular fa-circle"></i> Material titanio grado médico, <i class="fa-regular fa-circle"></i> Alta duración, <i class="fa-regular fa-circle"></i> Facíl cuidado </p>
-                                                                <h5 style="text-align: right; font-weight: 700;">PRECIO <span class="themecolor">$14,500 POR IMPLANTE</span></h5>
+                                            <div class="helper_content">
+                                                <div class="item item-1">
+                                                    <div class="acomodo">
+                                                        <div class="content-wrapper" style="width:80% ;background-color:#fafafa; padding:15px">
+                                                            <p class="big themecolor">
+                                                                <i class="fa-regular fa-circle">
+																</i> Protocolos digitales en todos los procesos
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Atención completamente personalizada
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Magnificación clínica con lupas
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Diseño digital de sonrisa
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Ambiente boutique
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Respaldo legal (firma de contrato)
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Protocolo de atención detallado
+                                                                <br>
+                                                                <i class="fa-regular fa-circle">
+																</i> Personal altamente capacitado
+                                                            </p>
+                                                        </div>
+                                                        <!-- Imagen -->
+                                                        <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
+                                                            <div class="image_wrapper">
+                                                                <img class="scale-with-grid" src="../../img/servicio1.jpg" width="780" height="600" />
                                                             </div>
-                                                            <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                                <div class="image_wrapper"><img class="scale-with-grid" src="../../img/offer-6.jpg" width="780" height="600" /> </div>
-                                                            </div> 
                                                         </div>
                                                     </div>
-                                                    <div class="item item-2"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -411,255 +537,26 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="section mcb-section" style="padding-top:30px; padding-bottom:20px;">
-                            <div class="section_wrapper mcb-section-inner">
-                                <div class="wrap mcb-wrap one  valign-top clearfix">
-                                    <div class="mcb-wrap-inner">
-                                        <div class="column mcb-column one column_column">
-                                            <div class="column_attr">
-                                                <h4>CIRUGÍA MAXILOFACIAL</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wrap  column-margin-10px valign-top clearfix">
-                                    <div class="mcb-wrap-inner">
-                                        <div class="column mcb-column one column_helper">
-                                            <div class="helper">
-                                                <div class="helper_header">
-                                                    <h5 class="title">Información</h5>
-                                                    <div class="links">
-                                                        <a class="link link-1 toggle" href="#" data-rel="1"><i class="fa-solid fa-chevron-down"></i></a> </div>
-                                                </div>
-                                                <div class="helper_content">
-                                                    <div class="item item-1">
-                                                        <div class="acomodo">
-                                                            <div class="content-wrapper">
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>PROCEDIMIENTOS</h5>
-                                                                <p>Extracciones complejas, terceros molares (muelas del juicio), regularización ósea, bichectomía, frenillos, entre otros.</p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>DURACIÓN DEL RESULTADO</h5>
-                                                                <p>
-                                                                    Permanente </p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>BENEFICIOS</h5>
-                                                                <p>
-                                                                Mejora funcional y estética, elimina infecciones o molestias, procedimientos seguros con anestesia local o sedación.</p>
-                                                                <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                                <h5>DETALLES</h5>
-                                                                <p class="big themecolor">
-                                                                    <i class="fa-regular fa-circle"></i> Extracciones complejas, <i class="fa-regular fa-circle"></i> Mejora funcional</p>
-                                                                <h5 style="text-align: right; font-weight: 700;">PRECIO <span class="themecolor">$1,800 POR PROCEDIMIENTO (según complejidad)</span></h5>
-                                                            </div>
-                                                            <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                                <div class="image_wrapper"><img class="scale-with-grid" src="../../img/offer-7.jpg" width="780" height="600" /> </div>
-                                                            </div> 
-                                                        </div>
-                                                    </div>
-                                                    <div class="item item-2"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--<div class="section mcb-section" style="padding-top:50px; padding-bottom:20px;">
-                            <div class="section_wrapper mcb-section-inner">
-                                <div class="wrap mcb-wrap one  valign-top clearfix">
-                                    <div class="mcb-wrap-inner">
-                                        <div class="column mcb-column one column_column">
-                                            <div class="column_attr">
-                                                <h4>ODONTOLOGÍA GENERAL</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wrap mcb-wrap one-second  column-margin-10px valign-top clearfix">
-                                    <div class="mcb-wrap-inner">
-                                        <div class="column mcb-column one column_helper">
-                                            <div class="helper">
-                                                <div class="helper_header">
-                                                    <h5 class="title">Información</h5>
-                                                    <div class="links">
-                                                        <a class="link link-1 toggle" href="#" data-rel="1"><i class="fa-solid fa-chevron-down"></i></a> </div>
-                                                </div>
-                                                <div class="helper_content">
-                                                    <div class="item item-1">
-                                                        <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                            <div class="image_wrapper"><img class="scale-with-grid" src="images/home_medic2_slidingbox1.jpg" width="780" height="600" /> </div>
-                                                        </div>
-                                                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                        <h5>DURACIÓN DEL MATERIAL</h5>
-                                                        <p>
-                                                            Aproximado entre 10-30 años. (Toda vez que el paciente sea responsable con sus cuidados de higiene, indicaciones específicas y acuda mínimo cada 6 meses a visita con el médico) </p>
-                                                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                        <h5>BENEFICIOS</h5>
-                                                        <p>
-                                                         Tienen la misma resistencia que el esmalte, No se necesita desgastar el diente 360 grados, No tienen un cambio de color y/o pigmentación.</p>
-                                                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                        <h5>DETALLES</h5>
-                                                        <p class="big themecolor">
-                                                            <i class="fa-regular fa-circle"></i> Material de Cerámica E.max, <i class="fa-regular fa-circle"></i> Alta duración, <i class="fa-regular fa-circle"></i> Facíl cuidado </p>
-                                                        <h5 style="text-align: right; font-weight: 700;">PRECIO <span class="themecolor">$7,590 POR DIENTE</span></h5>
-                                                    </div>
-                                                    <div class="item item-2"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column mcb-column one column_helper">
-                                            <div class="helper">
-                                                <div class="helper_header">
-                                                    <h5 class="title">Aliquam adipiscing ornare</h5>
-                                                    <div class="links">
-                                                        <a class="link link-1 toggle" href="#" data-rel="1"><i class="fa-solid fa-chevron-down"></i></a> </div>
-                                                </div>
-                                                <div class="helper_content">
-                                                    <div class="item item-1">
-                                                        <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                            <div class="image_wrapper"><img class="scale-with-grid" src="images/home_medic2_slidingbox1.jpg" width="780" height="600" /> </div>
-                                                        </div>
-                                                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                        <h5>CRAS NONUMMY</h5>
-                                                        <p>
-                                                            Aenean ipsum primis in massa. Nunc non metus sem, lobortis vitae, sollicitudin eget, porta dolor cursus vitae, vulputate sed, sollicitudin dignissim, lorem dapibus tellus. Donec in risus. Cras rhoncus nunc, mollis nunc eu nisl. Nam convallis auctor. Nam scelerisque viverra. </p>
-                                                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                        <h5>PORTTITOR RISUS</h5>
-                                                        <p class="big themecolor">
-                                                            <i class="icon-right-circled"></i> Aliquam adipiscing ornare, <i class="icon-right-circled"></i> Fusce ut aliquet, <i class="icon-right-circled"></i> Quisque fermentum, <i class="icon-right-circled"></i> Crasturpis, <i class="icon-right-circled"></i> Fusce ut aliquet </p>
-                                                        <h5 style="text-align: right; font-weight: 700;">PRICE <span class="themecolor">$23 - $34</span></h5>
-                                                    </div>
-                                                    <div class="item item-2"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column mcb-column one column_helper">
-                                            <div class="helper">
-                                                <div class="helper_header">
-                                                    <h5 class="title">Fusce iaculis turpis</h5>
-                                                    <div class="links">
-                                                        <a class="link link-1 toggle" href="#" data-rel="1"><i class="fa-solid fa-chevron-down"></i></a> </div>
-                                                </div>
-                                                <div class="helper_content">
-                                                    <div class="item item-1">
-                                                        <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                            <div class="image_wrapper"><img class="scale-with-grid" src="images/home_medic2_slidingbox1.jpg" width="780" height="600" /> </div>
-                                                        </div>
-                                                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                        <h5>CRAS NONUMMY</h5>
-                                                        <p>
-                                                            Aenean ipsum primis in massa. Nunc non metus sem, lobortis vitae, sollicitudin eget, porta dolor cursus vitae, vulputate sed, sollicitudin dignissim, lorem dapibus tellus. Donec in risus. Cras rhoncus nunc, mollis nunc eu nisl. Nam convallis auctor. Nam scelerisque viverra. </p>
-                                                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                        <h5>PORTTITOR RISUS</h5>
-                                                        <p class="big themecolor">
-                                                            <i class="icon-right-circled"></i> Aliquam adipiscing ornare, <i class="icon-right-circled"></i> Fusce ut aliquet, <i class="icon-right-circled"></i> Quisque fermentum, <i class="icon-right-circled"></i> Crasturpis, <i class="icon-right-circled"></i> Fusce ut aliquet </p>
-                                                        <h5 style="text-align: right; font-weight: 700;">PRICE <span class="themecolor">$23 - $34</span></h5>
-                                                    </div>
-                                                    <div class="item item-2"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wrap mcb-wrap one-second  column-margin-10px valign-top clearfix">
-                                    <div class="mcb-wrap-inner">
-                                        <div class="column mcb-column one column_helper">
-                                            <div class="helper">
-                                                <div class="helper_header">
-                                                    <h5 class="title">Nam feugiat dui</h5>
-                                                    <div class="links">
-                                                        <a class="link link-1 toggle" href="#" data-rel="1"><i class="fa-solid fa-chevron-down"></i></a> </div>
-                                                </div>
-                                                <div class="helper_content">
-                                                    <div class="item item-1">
-                                                        <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                            <div class="image_wrapper"><img class="scale-with-grid" src="images/home_medic2_slidingbox1.jpg" width="780" height="600" /> </div>
-                                                        </div>
-                                                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                        <h5>CRAS NONUMMY</h5>
-                                                        <p>
-                                                            Aenean ipsum primis in massa. Nunc non metus sem, lobortis vitae, sollicitudin eget, porta dolor cursus vitae, vulputate sed, sollicitudin dignissim, lorem dapibus tellus. Donec in risus. Cras rhoncus nunc, mollis nunc eu nisl. Nam convallis auctor. Nam scelerisque viverra. </p>
-                                                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                        <h5>PORTTITOR RISUS</h5>
-                                                        <p class="big themecolor">
-                                                            <i class="icon-right-circled"></i> Aliquam adipiscing ornare, <i class="icon-right-circled"></i> Fusce ut aliquet, <i class="icon-right-circled"></i> Quisque fermentum, <i class="icon-right-circled"></i> Crasturpis, <i class="icon-right-circled"></i> Fusce ut aliquet </p>
-                                                        <h5 style="text-align: right; font-weight: 700;">PRICE <span class="themecolor">$23 - $34</span></h5>
-                                                    </div>
-                                                    <div class="item item-2"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column mcb-column one column_helper">
-                                            <div class="helper">
-                                                <div class="helper_header">
-                                                    <h5 class="title">Vulputate sed</h5>
-                                                    <div class="links">
-                                                        <a class="link link-1 toggle" href="#" data-rel="1"><i class="fa-solid fa-chevron-down"></i></a> </div>
-                                                </div>
-                                                <div class="helper_content">
-                                                    <div class="item item-1">
-                                                        <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                            <div class="image_wrapper"><img class="scale-with-grid" src="images/home_medic2_slidingbox1.jpg" width="780" height="600" /> </div>
-                                                        </div>
-                                                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                        <h5>CRAS NONUMMY</h5>
-                                                        <p>
-                                                            Aenean ipsum primis in massa. Nunc non metus sem, lobortis vitae, sollicitudin eget, porta dolor cursus vitae, vulputate sed, sollicitudin dignissim, lorem dapibus tellus. Donec in risus. Cras rhoncus nunc, mollis nunc eu nisl. Nam convallis auctor. Nam scelerisque viverra. </p>
-                                                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                        <h5>PORTTITOR RISUS</h5>
-                                                        <p class="big themecolor">
-                                                            <i class="icon-right-circled"></i> Aliquam adipiscing ornare, <i class="icon-right-circled"></i> Fusce ut aliquet, <i class="icon-right-circled"></i> Quisque fermentum, <i class="icon-right-circled"></i> Crasturpis, <i class="icon-right-circled"></i> Fusce ut aliquet </p>
-                                                        <h5 style="text-align: right; font-weight: 700;">PRICE <span class="themecolor">$23 - $34</span></h5>
-                                                    </div>
-                                                    <div class="item item-2"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column mcb-column one column_helper">
-                                            <div class="helper">
-                                                <div class="helper_header">
-                                                    <h5 class="title">Donec in risus</h5>
-                                                    <div class="links">
-                                                        <a class="link link-1 toggle" href="#" data-rel="1"><i class="fa-solid fa-chevron-down"></i></a> </div>
-                                                </div>
-                                                <div class="helper_content">
-                                                    <div class="item item-1">
-                                                        <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                            <div class="image_wrapper"><img class="scale-with-grid" src="images/home_medic2_slidingbox1.jpg" width="780" height="600" /> </div>
-                                                        </div>
-                                                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                        <h5>CRAS NONUMMY</h5>
-                                                        <p>
-                                                            Aenean ipsum primis in massa. Nunc non metus sem, lobortis vitae, sollicitudin eget, porta dolor cursus vitae, vulputate sed, sollicitudin dignissim, lorem dapibus tellus. Donec in risus. Cras rhoncus nunc, mollis nunc eu nisl. Nam convallis auctor. Nam scelerisque viverra. </p>
-                                                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                                                        <h5>PORTTITOR RISUS</h5>
-                                                        <p class="big themecolor">
-                                                            <i class="icon-right-circled"></i> Aliquam adipiscing ornare, <i class="icon-right-circled"></i> Fusce ut aliquet, <i class="icon-right-circled"></i> Quisque fermentum, <i class="icon-right-circled"></i> Crasturpis, <i class="icon-right-circled"></i> Fusce ut aliquet </p>
-                                                        <h5 style="text-align: right; font-weight: 700;">PRICE <span class="themecolor">$23 - $34</span></h5>
-                                                    </div>
-                                                    <div class="item item-2"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
-                        <div class="section mcb-section" style="padding-top:50px; padding-bottom:50px; background-color: #ecc180; background-repeat:no-repeat; background-position:center bottom; ">
+
+                        <hr class="no_line" style="height:15px; background-color:#eee; margin:0" />
+
+                        <div class="section mcb-section" style="padding-top:50px; padding-bottom:50px; background-color: #ecc180; background-repeat:no-repeat; background-position:center bottom;">
                             <div class="section_wrapper mcb-section-inner">
                                 <div class="wrap mcb-wrap one  column-margin-0px valign-top clearfix">
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one-fourth column_placeholder">
                                             <div class="placeholder">
-                                                &nbsp; </div>
+                                                &nbsp;
+                                            </div>
                                         </div>
                                         <div class="column mcb-column one-second column_hover_color">
                                             <div class="hover_color" style="background:#f1d2a2;border-color:#f1d2a2;" ontouchstart="this.classList.toggle('hover');">
                                                 <div class="hover_color_bg" style="background:#ecc180;border-color:#ecc180;">
                                                     <a href="content/medic2/contact.html">
                                                         <div class="hover_color_wrapper" style="padding:20px 30px;">
-                                                            <h4 style="margin: 0; color: #fff;">AGENDA TU CITA VÍA WHATSAPP</h4>
+                                                            <h4 style="margin: 0; color: #fff;">
+                                                                AGENDA TU CITA VÍA WHATSAPP
+                                                            </h4>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -669,7 +566,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -679,44 +575,83 @@
                 <div class="container">
                     <div class="column one-fourth">
                         <aside class="widget widget_text">
-                            <h4>CONTÁCTANOS</h4>
+                            <h4>
+                                CONTÁCTANOS
+                            </h4>
                             <div class="textwidget">
                                 <ul style="line-height: 32px; margin-left: 10px;">
-                                    <li>Prolongación Ignacio Zaragoza #1004 San Telmo Medical Center Consultorio #618 Piso 6 20116 Aguascalientes, Mexico</li>
-                                    <!-- <li>
-                                        <a href="#">Class aptent taciti sociosqu </a> </li>
                                     <li>
-                                        <a href="#">Mauris in erat justo</a> </li>
-                                    <li>
-                                        <a href="#">Sed non neque</a> </li> -->
+                                        Prolongación Ignacio Zaragoza #1004 San Telmo Medical Center Consultorio #618 Piso 6 20116 Aguascalientes, Mexico
+                                    </li>
                                 </ul>
                             </div>
                         </aside>
                     </div>
                     <div class="column one-fourth">
                         <aside class="widget widget_text">
-                            <h4>EXPLORA</h4>
+                            <h4>
+                                EXPLORA
+                            </h4>
                             <div class="textwidget">
                                 <ul style="line-height: 32px; margin-left: 10px;">
-                                    <li><a href="../../index-medic2.html">Inicio</a> </li>
-                                    <li><a href="our-centre.html">Clínica</a> </li>
-                                    <li><a href="offer.html">Servicios</a> </li>
-                                    <li><a href="staff.html">Equipo </a> </li>
-                                    <li><a href="blog.html">Blog</a> </li>
-                                    <li><a href="contact.html">Contáctanos</a> </li>
-                                    <li><a href="bolsa.html">Bolsa de trabajo</a> </li>
+                                    <li>
+                                        <a href="../../index-medic2.html">
+											Inicio
+										</a>
+                                    </li>
+                                    <li>
+                                        <a href="our-centre.html">
+											Clínica
+										</a>
+                                    </li>
+                                    <li>
+                                        <a href="offer.html">
+											Servicios
+										</a>
+                                    </li>
+                                    <li>
+                                        <a href="staff.html">
+											Equipo
+										</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html">
+											Blog
+										</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">
+											Contáctanos
+										</a>
+                                    </li>
+                                    <li>
+                                        <a href="bolsa.html">
+											Bolsa de trabajo
+										</a>
+                                    </li>
                                 </ul>
                             </div>
                         </aside>
                     </div>
                     <div class="column one-second">
                         <aside class="widget widget_text">
-                            <h4>SOBRE NOSOTROS</h4>
+                            <h4>
+                                SOBRE NOSOTROS
+                            </h4>
                             <div class="textwidget">
                                 <p>
-                                    En Dental Clinic Boutique By Dr. Arce transformamos sonrisas con un enfoque integral, ético y altamente especializado.</p>
-                               
-                                <a class="button  button_right button_size_2 button_stroke_custom button_js" href="our-centre.html" style="border-color:#fff !important; color:#fff;"><span class="button_icon"><i class="fa-solid fa-chevron-right"  style="color:#fff !important;"></i></span><span class="button_label">Clínica</span></a> </div>
+                                    En Dental Clinic Boutique By Dr. Arce transformamos sonrisas con un enfoque integral, ético y altamente especializado.
+                                </p>
+                                <a class="button  button_right button_size_2 button_stroke_custom button_js" href="our-centre.html" style="border-color:#fff !important; color:#fff;">
+                                    <span class="button_icon">
+										<i class="fa-solid fa-chevron-right" style="color:#fff !important;">
+										</i>
+									</span>
+                                    <span class="button_label">
+										Clínica
+									</span>
+                                </a>
+                            </div>
                         </aside>
                     </div>
                 </div>
@@ -725,45 +660,130 @@
                 <div class="container">
                     <div class="column one">
                         <div class="copyright">
-                            Hecho con el ❤️ por <a target="_blank" rel="nofollow" href="https://www.lightbox.mx">Lightbox Mercadotecnia</a> </div>
+                            Hecho con el ❤️ por
+                            <a target="_blank" rel="nofollow" href="https://www.lightbox.mx">
+								Lightbox Mercadotecnia
+							</a>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
+        </footer>
     </div>
-    </footer>
-    </div>
-
-    <!-- JS -->
-     <script src="https://kit.fontawesome.com/8d4930fed5.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/8d4930fed5.js" crossorigin="anonymous"></script>
-    <script src="../../js/jquery-3.6.0.min.js"></script>
-	<script src="../../js/jquery-migrate-3.4.0.min.js"></script>
-
-    <script src="../../js/mfn.menu.js"></script>
-    <script src="../../js/jquery.plugins.js"></script>
-    <script src="../../js/jquery.jplayer.min.js"></script>
-    <script src="../../js/animations/animations.js"></script>
-    <script src="../../js/scripts.js"></script>
-
-    <script>
-        jQuery(window).on('load', function () {
-            var retina = window.devicePixelRatio> 1 ? true : false;
-            if (retina) {
-                var retinaEl = jQuery("#logo img.logo-main");
-                var retinaLogoW = retinaEl.width();
-                var retinaLogoH = retinaEl.height();
-                retinaEl.attr("src","../../img/logo.png").width(retinaLogoW).height(retinaLogoH);
-                var stickyEl = jQuery("#logo img.logo-sticky");
-                var stickyLogoW = stickyEl.width();
-                var stickyLogoH = stickyEl.height();
-                stickyEl.attr("src","../../img/logo.png").width(stickyLogoW).height(stickyLogoH);
-                var mobileEl = jQuery("#logo img.logo-mobile");
-                var mobileLogoW = mobileEl.width();
-                var mobileLogoH = mobileEl.height();
-                mobileEl.attr("src","../../img/logo.png").width(mobileLogoW).height(mobileLogoH);
-            }
-        });
+    <script src="https://kit.fontawesome.com/8d4930fed5.js" crossorigin="anonymous">
+    </script>
+    <script src="../../js/jquery-3.6.0.min.js">
+    </script>
+    <script src="../../js/jquery-migrate-3.4.0.min.js">
+    </script>
+    <script src="../../js/mfn.menu.js">
+    </script>
+    <script src="../../js/jquery.plugins.js">
+    </script>
+    <script src="../../js/jquery.jplayer.min.js">
+    </script>
+    <script src="../../js/animations/animations.js">
+    </script>
+    <script src="../../js/scripts.js">
+    </script>
+    <script>		
+        jQuery(window).on('load',
+        		function() {
+        			var retina = window.devicePixelRatio > 1 ? true: false;
+        			if (retina) {
+        				var retinaEl = jQuery("#logo img.logo-main");
+        				var retinaLogoW = retinaEl.width();
+        				var retinaLogoH = retinaEl.height();
+        				retinaEl.attr("src", "../../img/logo.png").width(retinaLogoW).height(retinaLogoH);
+        				var stickyEl = jQuery("#logo img.logo-sticky");
+        				var stickyLogoW = stickyEl.width();
+        				var stickyLogoH = stickyEl.height();
+        				stickyEl.attr("src", "../../img/logo.png").width(stickyLogoW).height(stickyLogoH);
+        				var mobileEl = jQuery("#logo img.logo-mobile");
+        				var mobileLogoW = mobileEl.width();
+        				var mobileLogoH = mobileEl.height();
+        				mobileEl.attr("src", "../../img/logo.png").width(mobileLogoW).height(mobileLogoH);
+        			}
+        		});
+        		function adjustWrapperHeight() {
+        			const wrapper = document.getElementById("Wrapper");
+        			const footer = document.getElementById("Footer");
+        			const wrapperRect = wrapper.getBoundingClientRect();
+        			const footerRect = footer.getBoundingClientRect();
+        			const newHeight = window.innerHeight - footerRect.height;
+        			if (wrapperRect.height < newHeight) {
+        				wrapper.style.height = `$ {
+        					newHeight
+        				}
+        				px`;
+        			}
+        		}
+        		window.addEventListener("resize", adjustWrapperHeight);
+        		
+           // 1. Array con las rutas de las imágenes
+                const imagenes = [
+                    '../../img/resultados1.jpg',
+                    '../../img/resultados2.jpg',
+                    '../../img/resultados3.jpg'
+                ];
+                
+                const imagenes1 = [
+                    '../../img/contact1.jpg',
+                    '../../img/endo.jpg',
+                    '../../img/offer-3.png',
+                    '../../img/offer-6.jpg',
+                    '../../img/offer-7.jpg',
+                    '../../img/offer-4.jpg',
+                    '../../img/peri.jpg'
+                    
+                ];
+        		
+                // 2. Referencia al contenedor
+                const contenedor = document.getElementById('contenedor-slideshow');
+                const contenedor1 = document.getElementById('contenedor-slideshow1');
+                
+                // 3. Crear y agregar imágenes al contenedor
+                imagenes.forEach((src, index) => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = `Imagen ${index + 1}`;
+                    img.classList.add('slide');
+                    if(index === 0) img.classList.add('activa');
+                    contenedor.appendChild(img);
+                });
+                
+				imagenes1.forEach((src, index) => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = `Imagen ${index + 1}`;
+                    img.classList.add('slide1');
+                    if(index === 0) img.classList.add('activa');
+                    contenedor1.appendChild(img);
+                });
+                
+                // 4. Función para cambiar imágenes
+                let indiceActual = 0;
+                let indiceActual1 = 0;
+                function cambiarImagen() {
+                    // Obtener todas las imágenes
+                    const slides = document.querySelectorAll('.slide');
+                    const slides1 = document.querySelectorAll('.slide1');
+                    
+                    // Remover clase activa de la imagen actual
+                    slides[indiceActual].classList.remove('activa');
+                    slides1[indiceActual1].classList.remove('activa');
+                    
+                    // Calcular nuevo índice (circular)
+                    indiceActual = (indiceActual + 1) % slides.length;
+                    indiceActual1 = (indiceActual1 + 1) % slides1.length;
+                    
+                    // Agregar clase activa a la nueva imagen
+                    slides[indiceActual].classList.add('activa');
+                    slides1[indiceActual1].classList.add('activa');
+                }
+                
+                // 5. Iniciar el intervalo (cambio cada 3 segundos)
+                setInterval(cambiarImagen, 3000);
     </script>
 </body>
 
