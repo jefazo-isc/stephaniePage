@@ -35,10 +35,12 @@
     <link rel='stylesheet' href='css/custom.css'>
 
 
+
+
 </head>
 
 <body class="layout-boxed nice-scroll-on mobile-tb-hide button-stroke no-content-padding header-classic header-boxed minimalist-header-no sticky-header sticky-white ab-hide subheader-both-center menuo-no-borders menuo-right logo-no-margin logo-no-sticky-padding footer-copy-center">
-    <div id="Wrapper">
+    <div id="Wrapper" style="background-color:#eee">
         <div id="Header_wrapper">
             <header id="Header">
                 <div class="header_placeholder"></div>
@@ -85,19 +87,17 @@
                 </div>
             </header>
         </div>
-        <div id="Content">
-            <div class="content_wrapper clearfix">
-                <div class="sections_group">
-                    <div class="entry-content">
-                        <div class="blog-container">
-                    		<div class="iframe-container">
-                        		<iframe src="https://blogdentalarce.lightbox.mx/"   sandbox="allow-same-origin allow-scripts allow-popups" title="Consejos del Dr. Arce" allowfullscreen></iframe>
-                    		</div>
-                		</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+	
+    	<iframe 
+		src="https://blogdentalarce.lightbox.mx/"
+    		sandbox="allow-same-origin allow-scripts allow-popups"
+    	  	title="Consejos del Dr. Arce"
+    	  	allowfullscreen
+    	 	 id="miIframe"
+   	   	style="height: 100vh; display: block; margin: 0 auto; width:60vw;"
+          ></iframe>
+
+
         <footer id="Footer" class="clearfix">
             <div class="widgets_wrapper">
                 <div class="container">
@@ -107,12 +107,6 @@
                             <div class="textwidget">
                                 <ul style="line-height: 32px; margin-left: 10px;">
                                     <li>Prolongación Ignacio Zaragoza #1004 San Telmo Medical Center Consultorio #618 Piso 6 20116 Aguascalientes, Mexico</li>
-                                    <!-- <li>
-                                        <a href="#">Class aptent taciti sociosqu </a> </li>
-                                    <li>
-                                        <a href="#">Mauris in erat justo</a> </li>
-                                    <li>
-                                        <a href="#">Sed non neque</a> </li> -->
                                 </ul>
                             </div>
                         </aside>
@@ -139,7 +133,6 @@
                             <div class="textwidget">
                                 <p>
                                     En Dental Clinic Boutique By Dr. Arce transformamos sonrisas con un enfoque integral, ético y altamente especializado.</p>
-                               
                                 <a class="button  button_right button_size_2 button_stroke_custom button_js" href="our-centre.html" style="border-color:#fff !important; color:#fff;"><span class="button_icon"><i class="fa-solid fa-chevron-right"  style="color:#fff !important;"></i></span><span class="button_label">Clínica</span></a> </div>
                         </aside>
                     </div>
@@ -161,13 +154,14 @@
     <!-- JS -->
     <script src="https://kit.fontawesome.com/8d4930fed5.js" crossorigin="anonymous"></script>
     <script src="../../js/jquery-3.6.0.min.js"></script>
-	<script src="../../js/jquery-migrate-3.4.0.min.js"></script>
-
+    <script src="../../js/jquery-migrate-3.4.0.min.js"></script>
     <script src="../../js/mfn.menu.js"></script>
     <script src="../../js/jquery.plugins.js"></script>
     <script src="../../js/jquery.jplayer.min.js"></script>
     <script src="../../js/animations/animations.js"></script>
     <script src="../../js/scripts.js"></script>
+
+
 
     <script src="../../js/email.js"></script>
 
@@ -198,4 +192,3 @@
 </body>
 
 </html>
-
