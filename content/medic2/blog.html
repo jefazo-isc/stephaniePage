@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
 <!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
@@ -34,7 +34,14 @@
     <link rel='stylesheet' href='css/medic2.css'>
     <link rel='stylesheet' href='css/custom.css'>
 
+<style>
 
+@media (max-width: 768px) {
+  #miIframe {
+    width: 90vw !important;
+  }
+}
+</style>
 
 
 </head>
@@ -94,7 +101,7 @@
     	  	title="Consejos del Dr. Arce"
     	  	allowfullscreen
     	 	 id="miIframe"
-   	   	style="height: 100vh; display: block; margin: 0 auto; width:60vw;"
+   	   	style="height: 90vh; display: block; margin: 0 auto; max-width:100vw; min-width:70vw"
           ></iframe>
 
 
@@ -192,3 +199,4 @@
 </body>
 
 </html>
+
