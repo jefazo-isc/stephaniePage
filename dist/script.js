@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const whatsappButton = document.createElement("button");
     whatsappButton.className = "whatsapp-button";
     whatsappButton.innerHTML = `
-        <span class="default-icon">
+        <span class="wa-default-icon">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
         </span>
-        <span class="close-icon">×</span>
+        <span class="wa-close-icon">×</span>
     `;
 
     // Crear el menú desplegable con las opciones de contacto
@@ -24,38 +24,38 @@ document.addEventListener("DOMContentLoaded", function () {
     menu.className = "whatsapp-menu";
     menu.innerHTML = `
         <!-- Encabezado del menú con título y descripción -->
-        <div class="menu-header">
-            <div class="header-icon-wrapper">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="header-icon">
+        <div class="wa-menu-header">
+            <div class="wa-header-icon-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-header-icon">
             </div>
-            <p class="header-title">Iniciar Conversación</p>
-            <p class="header-subtitle">Hola, clickea en una de las opciones del directorio para chatear por Whatsapp</p>
-            <p class="menu-subheader">💬 Respuesta en unos minutos</p>
+            <p class="wa-header-title">Iniciar Conversación</p>
+            <p class="wa-header-subtitle">Hola, clickea en una de las opciones del directorio para chatear por Whatsapp</p>
+            <p class="wa-menu-subheader">💬 Respuesta en unos minutos</p>
         </div>
         
         <!-- Opciones del menú -->
         <!-- Opción 1: Agendar cita -->
-        <a href="https://wa.me/+15550571107?text=Hola,%20quiero%20agendar%20una%20cita" class="menu-item">
-            <div class="menu-icon">
+        <a href="https://wa.me/+15550571107?text=Hola,%20quiero%20agendar%20una%20cita" class="wa-menu-item">
+            <div class="wa-menu-icon">
                 <i class="fa-solid fa-calendar-days"></i>
             </div>
-            <div class="menu-text">
+            <div class="wa-menu-text">
                 <strong>Agendar cita</strong>
                 <span>Agenda el día y hora que más te convenga</span>
             </div>
-            <div class="menu-arrow">→</div>
+            <div class="wa-menu-arrow">→</div>
         </a>
         
         <!-- Opción 2: Más información -->
-        <a href="https://wa.me/+15550571107?text=Hola,%20me%20gustaría%20más%20información" class="menu-item">
-            <div class="menu-icon">
+        <a href="https://wa.me/+15550571107?text=Hola,%20me%20gustaría%20más%20información" class="wa-menu-item">
+            <div class="wa-menu-icon">
                 <i class="fa-solid fa-circle-info"></i>
             </div>
-            <div class="menu-text">
+            <div class="wa-menu-text">
                 <strong>Más información</strong>
                 <span>Obtén más detalles sobre nuestros servicios</span>
             </div>
-            <div class="menu-arrow">→</div>
+            <div class="wa-menu-arrow">→</div>
         </a>
         
         <!-- Opción 3: Oportunidades Laborales
@@ -91,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
             bottom: 20px;
             right: 20px;
             z-index: 99999;
+        
         }
 
         .whatsapp-button {
@@ -183,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
             transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .whatsapp-button .default-icon {
+        .whatsapp-button .wa-default-icon {
             width: 35px;
             height: 35px;
             display: flex;
@@ -193,12 +194,12 @@ document.addEventListener("DOMContentLoaded", function () {
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
         }
 
-        .whatsapp-button:hover .default-icon {
+        .whatsapp-button:hover .wa-default-icon {
             transform: rotate(10deg) scale(1.1);
             filter: brightness(1.2) drop-shadow(0 3px 6px rgba(0,0,0,0.3));
         }
 
-        .whatsapp-button .close-icon {
+        .whatsapp-button .wa-close-icon {
             position: absolute;
             font-size: 35px;
             display: none;
@@ -223,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
             opacity: 0;
         }
 
-        .whatsapp-container.active .close-icon {
+        .whatsapp-container.active .wa-close-icon {
             display: block;
             animation: spinIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
@@ -301,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        .menu-header {
+        .wa-menu-header {
             padding: 25px;
             background: linear-gradient(135deg, #25D366, #128C7E);
             border-radius: 15px 15px 0 0;
@@ -311,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
             overflow: hidden;
         }
 
-        .menu-header::before {
+        .wa-menu-header::before {
             content: '';
             position: absolute;
             top: -50%;
@@ -337,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        .header-icon-wrapper {
+        .wa-header-icon-wrapper {
             background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             width: 60px;
@@ -350,30 +351,30 @@ document.addEventListener("DOMContentLoaded", function () {
             transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-        .header-icon-wrapper:hover {
+        .wa-header-icon-wrapper:hover {
             transform: scale(1.1) rotate(10deg);
         }
 
-        .header-icon {
+        .wa-header-icon {
             width: 35px;
             height: 35px;
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
         }
 
-        .header-title {
+        .wa-header-title {
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 5px;
             color: #ffffff;
         }
 
-        .header-subtitle {
+        .wa-header-subtitle {
             font-size: 14px;
             color: #ffffff;
             margin-bottom: 10px;
         }
 
-        .menu-subheader {
+        .wa-menu-subheader {
             font-size: 12px;
             color: #ffffff;
             background: rgba(255, 255, 255, 0.1);
@@ -382,7 +383,7 @@ document.addEventListener("DOMContentLoaded", function () {
             display: inline-block;
         }
 
-        .menu-item {
+        .wa-menu-item {
             display: flex;
             align-items: center;
             padding: 20px;
@@ -395,18 +396,18 @@ document.addEventListener("DOMContentLoaded", function () {
             backdrop-filter: blur(5px);
         }
 
-        .menu-item:last-child {
+        .wa-menu-item:last-child {
             border-bottom: none;
             border-radius: 0 0 15px 15px;
         }
 
-        .menu-item:hover {
+        .wa-menu-item:hover {
             background: linear-gradient(to right, rgba(37, 211, 102, 0.15), transparent);
             transform: translateX(8px);
             box-shadow: 0 2px 8px rgba(37, 211, 102, 0.1);
         }
 
-        .menu-icon {
+        .wa-menu-icon {
             width: 45px;
             height: 45px;
             background: linear-gradient(135deg, #25D366, #128C7E);
@@ -423,16 +424,16 @@ document.addEventListener("DOMContentLoaded", function () {
             transform: rotate(0deg);
         }
 
-        .menu-item:hover .menu-icon {
+        .wa-menu-item:hover .wa-menu-icon {
             transform: scale(1.15) rotate(-12deg);
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
         }
 
-        .menu-text {
+        .wa-menu-text {
             flex: 1;
         }
 
-        .menu-text strong {
+        .wa-menu-text strong {
             display: block;
             font-size: 16px;
             color: #1a1a1a;
@@ -440,12 +441,12 @@ document.addEventListener("DOMContentLoaded", function () {
             font-weight: 600;
         }
 
-        .menu-text span {
+        .wa-menu-text span {
             font-size: 13px;
             color: #666;
         }
 
-        .menu-arrow {
+        .wa-menu-arrow {
             font-size: 20px;
             color: #25D366;
             margin-left: 15px;
@@ -454,7 +455,7 @@ document.addEventListener("DOMContentLoaded", function () {
             transition: all 0.3s ease;
         }
 
-        .menu-item:hover .menu-arrow {
+        .wa-menu-item:hover .wa-menu-arrow {
             opacity: 1;
             transform: translateX(0);
         }
@@ -470,7 +471,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        .menu-item:active::after {
+        .wa-menu-item:active::after {
             content: '';
             position: absolute;
             top: 50%;
@@ -495,7 +496,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        .particle {
+        .wa-particle {
             position: absolute;
             background: linear-gradient(45deg, #25D366, white);
             border-radius: 50%;
@@ -527,7 +528,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             }
 
-            .menu-item:hover {
+            .wa-menu-item:hover {
                 transform: translateX(5px);
             }
 
@@ -548,25 +549,25 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        .menu-header .header-title {
+        .wa-menu-header .wa-header-title {
             animation: fadeInDown 0.6s ease forwards;
             animation-delay: 0.2s;
             opacity: 0;
         }
 
-        .menu-header .header-subtitle {
+        .wa-menu-header .wa-header-subtitle {
             animation: fadeInDown 0.6s ease forwards;
             animation-delay: 0.4s;
             opacity: 0;
         }
 
-        .menu-header .menu-subheader {
+        .wa-menu-header .wa-menu-subheader {
             animation: fadeInDown 0.6s ease forwards;
             animation-delay: 0.6s;
             opacity: 0;
         }
 
-        .menu-item {
+        .wa-menu-item {
             opacity: 0;
             animation: fadeInDown 0.6s ease forwards;
         }
@@ -593,7 +594,7 @@ document.addEventListener("DOMContentLoaded", function () {
     whatsappButton.addEventListener("click", function(e) {
         for(let i = 0; i < 8; i++) {
             const particle = document.createElement("div");
-            particle.className = "particle";
+            particle.className = "wa-particle";
             const size = Math.random() * 4 + 2;
             particle.style.width = size + "px";
             particle.style.height = size + "px";
