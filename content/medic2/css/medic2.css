@@ -380,7 +380,6 @@
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
 	}
 	.layout-boxed.header-boxed #Top_bar.is-sticky {
-		max-width: 1240px;
 		left: 50%;
 		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%);
@@ -1409,13 +1408,10 @@ h6 {
 }
 @media only screen and (min-width:1240px) {
 	#Wrapper, .with_aside .content_wrapper {
-		max-width: 1240px;
 	}
 	.section_wrapper, .container {
-		max-width: 1220px;
 	}
 	.layout-boxed.header-boxed #Top_bar.is-sticky {
-		max-width: 1240px;
 	}
 }
 @media only screen and (min-width:768px) {
@@ -1609,7 +1605,7 @@ a.button.button_full_width, button.button_full_width, input[type="submit"].butto
 }
 @media only screen and (max-width: 767px) {
 	#Wrapper {
-		width: calc(100% - 67px);
+		width: 100%;
 	}
 }
 @media only screen and (max-width: 767px) {
@@ -1711,7 +1707,6 @@ body:not(.template-slider) #Header_wrapper {
 }
 @media only screen and (min-width: 1240px) {
 	.section_wrapper, .container {
-		max-width: 1220px;
 	}
 }
 #Content.no-padding, .template-slider #Content, .with_aside #Content {

@@ -28,11 +28,8 @@
 ================================================== */
 
 body {
-	min-width: 1240px;
-	padding: 25px 0;
 }
 #Wrapper {
-	width: 1240px;
 	margin: 0px auto;
 	overflow: hidden;
 }
@@ -57,7 +54,6 @@ body:not(.template-slider) #Content {
 	position: relative;
 }
 .section_wrapper, .container {
-	width: 1200px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -333,7 +329,6 @@ body:not(.template-slider) #Content {
 	margin-bottom: 20px
 }
 .rev_slider iframe {
-	max-width: 1220px;
 }
 .rev_slider ul {
 	margin: 0 !important;
