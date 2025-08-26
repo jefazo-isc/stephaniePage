@@ -1502,7 +1502,7 @@ body.minimalist-header.header-below:not(.template-slider) #Header {
 	width: 100%;
 	position: absolute;
 	left: 0;
-	top: -4px;
+	/*top: -4px;*/
 	z-index: 203;
 	opacity: 0;
 	filter: alpha(opacity=0);
@@ -1510,7 +1510,7 @@ body.minimalist-header.header-below:not(.template-slider) #Header {
 #Top_bar .menu>li>a span:not(.description) {
 	display: block;
 	line-height: 60px;
-	padding: 0 20px;
+	padding: 0 10px;
 	white-space: nowrap;
 	border-right-width: 1px;
 	border-style: solid;

@@ -1,0 +1,104 @@
+/* Eliminar o modificar estos estilos problemáticos */
+#Wrapper{
+    width: 100%;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+#Top_bar .container {
+    width: 100%;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.container {
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+}
+
+.logo {
+    flex-shrink: 0 !important;
+    margin-right: 20px !important;
+    float: none !important;
+}
+
+.menu_wrapper {
+    flex-grow: 1 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    float: none !important;
+    clear: none !important;
+}
+
+@media only screen and (min-width: 1200px){
+    .top_bar_left {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        flex-wrap: nowrap !important;
+        float: none !important;
+    }
+    #menu-main-menu li a span {
+        font-size: 18px !important;
+        padding:0;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1250px) {
+    .top_bar_left {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        flex-wrap: nowrap !important;
+        float: none !important;
+    }
+    
+    .responsive-menu-toggle {
+        display: none !important;
+    }
+    
+    #menu,
+    .menu-main-menu-container,
+    #menu-main-menu,
+    .menu {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: static !important;
+        transform: none !important;
+        height: auto !important;
+        width: auto !important;
+        overflow: visible !important;
+    }
+    
+    #menu-main-menu li a span {
+        font-size: 15px !important;
+        padding:0;
+        margin: 0;
+    }
+    
+}
+
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+* {
+    box-sizing: border-box !important;
+}
+
+
+#Header_wrapper,
+#Header {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
