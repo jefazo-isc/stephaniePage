@@ -35,6 +35,50 @@
 
     <!-- Revolution Slider -->
     <link rel="stylesheet" href="plugins/rs-plugin/css/settings.css">
+<style>
+
+
+iframe{
+	    background-color:black;
+
+}
+
+  .padreiframe {
+    position: relative;
+    width: 100%;
+    background-color:black;
+  }
+
+  .padreiframe iframe {
+    width: 100%;
+    display: block;
+    border: 0;
+    /* altura inicial: escritorio -> 400px, móvil se ajusta con media queries */
+    height: 400px;
+    overflow: auto; /* permite scroll interno si el contenido no cabe */
+    background-color:black;
+  }
+
+  .padreiframe .overlay-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+        background-color:black;
+
+  }
+
+  /* móvil: dar más altura por defecto para evitar que se vea cortado */
+  @media (max-width: 768px) {
+    .padreiframe iframe { height: 444px; }
+  }
+
+  /* opcional: clase para cuando el iframe ya se autoajustó */
+  .padreiframe.auto-height iframe { height: auto; }
+</style>
 
 </head>
 
@@ -348,11 +392,11 @@
                             </div>
                         </div>
                         
-                        <div style="position:relative; width:100%; height:310px;">
-                            <iframe id="miiframe" src="https://blogdentalarce.lightbox.mx/?page_id=454" width="100%" height="310" style="border:none; overflow:hidden;" scrolling="no"></iframe>
-                            <div id="overlay-iframe" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;cursor:pointer;" onclick="this.style.display='none';" title="Haz clic para activar el contenido">
-                            </div>
+                         <div class= "padreiframe" style="position:relative; width:100%; height:100%;">
+                            <iframe  src="https://blogdentalarce.lightbox.mx/?page_id=454" width="100%"  style="border:none; overflow:hidden;" scrolling="no"></iframe>
+                            
                         </div>
+
 
                         <div class="section mcb-section" style="padding-top:50px; padding-bottom:20px; background-color:#15110e; background-image:url(content/medic2/images/home_medic2_sectionbg3.jpg); background-repeat:no-repeat; background-position:center bottom; ">
                             <div class="section_wrapper mcb-section-inner">
