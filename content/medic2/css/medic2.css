@@ -74,7 +74,7 @@
 	}
 }
 #Subheader {
-	background-image: url(../images/home_medic2_subheader_bg.png);
+	background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/home_medic2_subheader_bg.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -896,7 +896,7 @@ a.mfn-link-6:before {
 	color: #ede5d9;
 }
 #Top_bar .responsive-menu-toggle {
-	color: #daa520;
+	color: #fff;
 }
 #Subheader .title {
 	color: #fff;
@@ -1005,10 +1005,11 @@ a.content_link:after {
 	background-color: #daa520;
 }
 .icon_box .icon_wrapper, .icon_box a .icon_wrapper, .style-simple .icon_box:hover .icon_wrapper {
-	color: #daa520;
+	color: var(--color-accent-active);
 }
 .icon_box:hover .icon_wrapper:before, .icon_box a:hover .icon_wrapper:before {
-	background-color: #daa520;
+	/* background-color: #daa520; */
+	background-color: var(--btn-primary-hover);
 }
 ul.clients.clients_tiles li .client_wrapper:hover:before {
 	background: #daa520;
@@ -1069,7 +1070,7 @@ input[type="date"]:focus, input[type="email"]:focus, input[type="number"]:focus,
 }
 @media only screen and (max-width: 767px) {
 	#Top_bar, #Action_bar {
-		background: var(--color-neutral-mid) !important;
+		background: var(--color-accent-dark) !important;
 	}
 }
 html {
