@@ -1,3 +1,57 @@
+
+:root {
+  /* Colores base */
+  --color-bg-dark: #535353;        /* Fondo principal (modo oscuro) */
+  --color-neutral-light: #c2c2c2;  /* Texto principal / gris claro */
+  --color-neutral-mid: #b8b7b8;    /* Texto secundario poco contraste, usar poco */
+  --color-accent: #e9dcc8;         /* Acento (titulares, botones, enlaces) */
+
+  /* Tonos más oscuros */
+  --color-bg-card: #3e3e3e;   /* Fondo alterno (tarjetas/secciones) */
+  --color-bg-deep: #2a2a2a;   /* Fondo profundo (footer, navbar sticky) */
+
+  /* Escala de grises extendida */
+  --color-text-muted: #9a9a9a;     /* Texto atenuado (placeholder, notas) */
+  --color-text-disabled: #7a7a7a;  /* Texto deshabilitado */
+
+  /* Variantes del acento */
+  --color-accent-hover: #d4c4a6;   /* Hover de acento (botones/enlaces) */
+  --color-accent-active: #bba985;  /* Estado activo / pressed */
+  --color-accent-dark: #a39070;    /* Variante oscura del acento */
+
+  /* Tipografía */
+  --color-text-primary: var(--color-neutral-light);   /* Texto general */
+  --color-text-secondary: var(--color-neutral-mid);   /* Texto secundario */
+  --color-text-heading: var(--color-accent);          /* Titulares */
+
+  /* Enlaces */
+  --color-link: var(--color-accent);
+  --color-link-hover: var(--color-accent-hover);
+  --color-link-active: var(--color-accent-active);
+
+  /* Botones */
+  --btn-primary-bg: var(--color-accent);
+  --btn-primary-text: var(--color-bg-dark);
+  --btn-primary-hover: var(--color-accent-hover);
+  --btn-primary-active: var(--color-accent-active);
+
+  --btn-secondary-bg: transparent;
+  --btn-secondary-border: var(--color-accent);
+  --btn-secondary-text: var(--color-accent);
+  --btn-secondary-hover-bg: var(--color-accent);
+  --btn-secondary-hover-text: var(--color-bg-dark);
+  --btn-secondary-active-bg: var(--color-accent-dark);
+  --btn-secondary-active-text: var(--color-bg-dark);
+
+  /* Elementos UI (tarjetas, bordes) */
+  --card-bg: var(--color-bg-card);
+  --card-border: var(--color-neutral-mid);
+}
+
+
+
+
+
 @media only screen and (max-width: 767px) {
 	#Header a.responsive-menu-toggle {
 		position: absolute !important;
@@ -643,7 +697,7 @@
 	background-color: #eeeeee;
 }
 #Subheader {
-	background-color: #eeeeee;
+	background-color: #000000;
 }
 .header-classic #Action_bar, .header-plain #Action_bar, .header-stack #Action_bar {
 	background-color: #2C2C2C;
@@ -661,10 +715,10 @@
 	background-color: #000000;
 }
 body, ul.timeline_items, .icon_box a .desc, .icon_box a:hover .desc, .feature_list ul li a, .list_item a, .list_item a:hover, .widget_recent_entries ul li a, .flat_box a, .flat_box a:hover, .story_box .desc, .content_slider.carouselul li a .title, .content_slider.flat.description ul li .desc, .content_slider.flat.description ul li a .desc {
-	color: #5a5a5a;
+	color: var(--color-text-secondary);
 }
 .themecolor, .opening_hours .opening_hours_wrapper li span, .fancy_heading_icon .icon_top, .fancy_heading_arrows .icon-right-dir, .fancy_heading_arrows .icon-left-dir, .fancy_heading_line .title, .button-love a.mfn-love, .format-link .post-title .icon-link, .pager-single>span, .pager-single a:hover, .widget_meta ul, .widget_pages ul, .widget_rss ul, .widget_mfn_recent_comments ul li:after, .widget_archive ul, .widget_recent_comments ul li:after, .widget_nav_menu ul, .woocommerce ul.products li.product .price, .shop_slider .shop_slider_ul li .item_wrapper .price, .woocommerce-page ul.products li.product .price, .widget_price_filter .price_label .from, .widget_price_filter .price_label .to, .woocommerce ul.product_list_widget li .quantity .amount, .woocommerce .product div.entry-summary .price, .woocommerce .star-rating span, #Error_404 .error_pic i, .style-simple #Filters .filters_wrapper ul li a:hover, .style-simple #Filters .filters_wrapper ul li.current-cat a, .style-simple .quick_fact .title {
-	color: #daa520;
+	color: var(--color-accent-hover);
 }
 .themebg, .pager .pages a:hover, .pager .pages a.active, .pager .pages span.page-numbers.current, .pager-single span:after, #comments .commentlist>li .reply a.comment-reply-link, .fixed-nav .arrow, #Filters .filters_wrapper ul li a:hover, #Filters .filters_wrapper ul li.current-cat a, .widget_categories ul, .Recent_posts ul li .desc:after, .Recent_posts ul li .photo .c, .widget_recent_entries ul li:after, .widget_product_categories ul, div.jp-interface, #Top_bar a#header_cart span, .widget_mfn_menu ul li a:hover, .widget_mfn_menu ul li.current-menu-item:not(.current-menu-ancestor)>a, .widget_mfn_menu ul li.current_page_item:not(.current_page_ancestor)>a, .testimonials_slider .slider_images, .testimonials_slider .slider_images a:after, .testimonials_slider .slider_images:before, .slider_pagination a.selected, .slider_pagination a.selected:after, .tp-bullets.simplebullets.round .bullet.selected, .tp-bullets.simplebullets.round .bullet.selected:after, .tparrows.default, .tp-bullets.tp-thumbs .bullet.selected:after, .offer_thumb .slider_pagination a:before, .offer_thumb .slider_pagination a.selected:after, .style-simple .accordion .question:after, .style-simple .faq .question:after, .style-simple .icon_box .desc_wrapper h4:before, .style-simple #Filters .filters_wrapper ul li a:after, .style-simple .article_box .desc_wrapper p:after, .style-simple .sliding_box .desc_wrapper:after, .style-simple .trailer_box:hover .desc, .woocommerce-account table.my_account_orders .order-number a, .portfolio_group.exposure .portfolio-item .desc-inner .line, .style-simple .zoom_box .desc .desc_txt {
 	background-color: #daa520;
@@ -673,7 +727,7 @@ body, ul.timeline_items, .icon_box a .desc, .icon_box a:hover .desc, .feature_li
 	border-color: #daa520;
 }
 a {
-	color: #daa520;
+	color: var(--color-accent-hover);
 }
 a:hover {
 	color: #796240;
@@ -691,13 +745,13 @@ h1, h1 a, h1 a:hover, .text-logo #logo {
 	color: #353535;
 }
 h2, h2 a, h2 a:hover {
-	color: #353535;
+	color: var(--color-text-primary);
 }
 h3, h3 a, h3 a:hover {
 	color: #353535;
 }
 h4, h4 a, h4 a:hover, .style-simple .sliding_box .desc_wrapper h4 {
-	color: #daa520;
+	color: var(--color-accent-active);
 }
 h5, h5 a, h5 a:hover {
 	color: #353535;
@@ -713,8 +767,8 @@ a.button, a.tp-button {
 	color: #353535;
 }
 .button-stroke a.button, .button-stroke a.button .button_icon i, .button-stroke a.tp-button {
-	border-color: #353535;
-	color: #353535;
+	border-color: var(--color-neutral-light);
+	color: var(--color-neutral-light);
 }
 .button-stroke a:hover.button, .button-stroke a:hover.tp-button {
 	background-color: #353535 !important;
@@ -774,7 +828,7 @@ a.mfn-link-6:before {
 	}
 }
 #Header .top_bar_left, .header-classic #Top_bar, .header-plain #Top_bar, .header-stack #Top_bar, .header-split #Top_bar, .header-fixed #Top_bar, .header-below #Top_bar, #Header_creative, #Top_bar #menu, .sticky-tb-color #Top_bar.is-sticky {
-	background-color: #000000;
+	background-color: var(--color-accent-dark);
 }
 #Top_bar .top_bar_right:before {
 	background-color: #e3e3e3;
@@ -786,13 +840,13 @@ a.mfn-link-6:before {
 	color: #444;
 }
 #Top_bar .menu>li>a {
-	color: #ffffff;
+	color: var(--color-bg-deep);
 }
 #Top_bar .menu>li.current-menu-item>a, #Top_bar .menu>li.current_page_item>a, #Top_bar .menu>li.current-menu-parent>a, #Top_bar .menu>li.current-page-parent>a, #Top_bar .menu>li.current-menu-ancestor>a, #Top_bar .menu>li.current-page-ancestor>a, #Top_bar .menu>li.current_page_ancestor>a, #Top_bar .menu>li.hover>a {
-	color: #eeb469;
+	color: #fff;
 }
 #Top_bar .menu>li a:after {
-	background: #9e8565;
+	background: var(--color-accent);
 }
 .menuo-arrows #Top_bar .menu>li.submenu>a>span:not(.description)::after {
 	border-top-color: #353535;
@@ -845,7 +899,7 @@ a.mfn-link-6:before {
 	color: #daa520;
 }
 #Subheader .title {
-	color: #72685a;
+	color: #fff;
 }
 #Subheader ul.breadcrumbs li, #Subheader ul.breadcrumbs li a {
 	color: rgba(114, 104, 90, 0.6);
@@ -909,7 +963,7 @@ blockquote, blockquote a, blockquote a:hover {
 	color: #daa520;
 }
 .sliding_box .desc_wrapper {
-	background: #daa520;
+	background: var(--color-accent-dark);
 }
 .sliding_box .desc_wrapper:after {
 	border-bottom-color: #daa520;
@@ -1015,7 +1069,7 @@ input[type="date"]:focus, input[type="email"]:focus, input[type="number"]:focus,
 }
 @media only screen and (max-width: 767px) {
 	#Top_bar, #Action_bar {
-		background: #000000 !important;
+		background: var(--color-neutral-mid) !important;
 	}
 }
 html {

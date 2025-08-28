@@ -27,6 +27,55 @@
 /* #Base 1200 Grid
 ================================================== */
 
+:root {
+  /* Colores base */
+  --color-bg-dark: #535353;        /* Fondo principal (modo oscuro) */
+  --color-neutral-light: #c2c2c2;  /* Texto principal / gris claro */
+  --color-neutral-mid: #b8b7b8;    /* Texto secundario poco contraste, usar poco */
+  --color-accent: #e9dcc8;         /* Acento (titulares, botones, enlaces) */
+
+  /* Tonos más oscuros */
+  --color-bg-card: #3e3e3e;   /* Fondo alterno (tarjetas/secciones) */
+  --color-bg-deep: #2a2a2a;   /* Fondo profundo (footer, navbar sticky) */
+
+  /* Escala de grises extendida */
+  --color-text-muted: #9a9a9a;     /* Texto atenuado (placeholder, notas) */
+  --color-text-disabled: #7a7a7a;  /* Texto deshabilitado */
+
+  /* Variantes del acento */
+  --color-accent-hover: #d4c4a6;   /* Hover de acento (botones/enlaces) */
+  --color-accent-active: #bba985;  /* Estado activo / pressed */
+  --color-accent-dark: #a39070;    /* Variante oscura del acento */
+
+  /* Tipografía */
+  --color-text-primary: var(--color-neutral-light);   /* Texto general */
+  --color-text-secondary: var(--color-neutral-mid);   /* Texto secundario */
+  --color-text-heading: var(--color-accent);          /* Titulares */
+
+  /* Enlaces */
+  --color-link: var(--color-accent);
+  --color-link-hover: var(--color-accent-hover);
+  --color-link-active: var(--color-accent-active);
+
+  /* Botones */
+  --btn-primary-bg: var(--color-accent);
+  --btn-primary-text: var(--color-bg-dark);
+  --btn-primary-hover: var(--color-accent-hover);
+  --btn-primary-active: var(--color-accent-active);
+
+  --btn-secondary-bg: transparent;
+  --btn-secondary-border: var(--color-accent);
+  --btn-secondary-text: var(--color-accent);
+  --btn-secondary-hover-bg: var(--color-accent);
+  --btn-secondary-hover-text: var(--color-bg-dark);
+  --btn-secondary-active-bg: var(--color-accent-dark);
+  --btn-secondary-active-text: var(--color-bg-dark);
+
+  /* Elementos UI (tarjetas, bordes) */
+  --card-bg: var(--color-bg-card);
+  --card-border: var(--color-neutral-mid);
+}
+
 body {
 }
 #Wrapper {
@@ -1528,6 +1577,7 @@ body.minimalist-header.header-below:not(.template-slider) #Header {
 	border: 0;
 }
 #Top_bar .menu>li>a:hover {
+	color: var(--color-bg-dark);
 	text-decoration: none;
 }
 .menu-arrows #Top_bar .menu>li.submenu>a>span:not(.description) {
