@@ -30,6 +30,55 @@
 |
 */
 
+:root {
+  /* Colores base */
+  --color-bg-dark: #535353;        /* Fondo principal (modo oscuro) */
+  --color-neutral-light: #c2c2c2;  /* Texto principal / gris claro */
+  --color-neutral-mid: #b8b7b8;    /* Texto secundario poco contraste, usar poco */
+  --color-accent: #e9dcc8;         /* Acento (titulares, botones, enlaces) */
+
+  /* Tonos más oscuros */
+  --color-bg-card: #3e3e3e;   /* Fondo alterno (tarjetas/secciones) */
+  --color-bg-deep: #2a2a2a;   /* Fondo profundo (footer, navbar sticky) */
+
+  /* Escala de grises extendida */
+  --color-text-muted: #9a9a9a;     /* Texto atenuado (placeholder, notas) */
+  --color-text-disabled: #7a7a7a;  /* Texto deshabilitado */
+
+  /* Variantes del acento */
+  --color-accent-hover: #d4c4a6;   /* Hover de acento (botones/enlaces) */
+  --color-accent-active: #bba985;  /* Estado activo / pressed */
+  --color-accent-dark: #a39070;    /* Variante oscura del acento */
+
+  /* Tipografía */
+  --color-text-primary: var(--color-neutral-light);   /* Texto general */
+  --color-text-secondary: var(--color-neutral-mid);   /* Texto secundario */
+  --color-text-heading: var(--color-accent);          /* Titulares */
+
+  /* Enlaces */
+  --color-link: var(--color-accent);
+  --color-link-hover: var(--color-accent-hover);
+  --color-link-active: var(--color-accent-active);
+
+  /* Botones */
+  --btn-primary-bg: var(--color-accent);
+  --btn-primary-text: var(--color-bg-dark);
+  --btn-primary-hover: var(--color-accent-hover);
+  --btn-primary-active: var(--color-accent-active);
+
+  --btn-secondary-bg: transparent;
+  --btn-secondary-border: var(--color-accent);
+  --btn-secondary-text: var(--color-accent);
+  --btn-secondary-hover-bg: var(--color-accent);
+  --btn-secondary-hover-text: var(--color-bg-dark);
+  --btn-secondary-active-bg: var(--color-accent-dark);
+  --btn-secondary-active-text: var(--color-bg-dark);
+
+  /* Elementos UI (tarjetas, bordes) */
+  --card-bg: var(--color-bg-card);
+  --card-border: var(--color-neutral-mid);
+}
+
 /* #Reset & Basics (Inspired by E. Meyers)
 ================================================== */
 
@@ -7517,7 +7566,7 @@ hr {
 /* Image frames & Google maps & Icon bar */
 
 .image_frame, .wp-caption, .google-map, .icon_box .icon_wrapper, .content_slider .content_slider_ul, .author-box .avatar-wrapper, #comments .commentlist>li .photo, .edd_download_image {
-	border-color: #f8f8f8
+	border-color: var(--btn-primary-active);
 }
 .wp-caption-text {
 	background: #f8f8f8;
@@ -7621,7 +7670,7 @@ a.icon_bar {
 
 @media only screen and (max-width: 959px) {
 	#Header #menu>ul>li.current-menu-item>a, #Header #menu>ul>li.current_page_item>a, #Header #menu>ul>li.current-menu-parent>a, #Header #menu>ul>li.current-page-parent>a, #Header #menu>ul>li.current-menu-ancestor>a, #Header #menu>ul>li.current_page_ancestor>a {
-		background: rgba(0, 0, 0, .02)
+		background: rgba(0, 0, 0, .15)
 	}
 }
 /* Style Simple ---------------------------------------------------------------------- */
