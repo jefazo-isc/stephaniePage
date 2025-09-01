@@ -33,6 +33,16 @@
     <link rel='stylesheet' href='css/medic2.css'>
     <link rel='stylesheet' href='css/custom.css'>
 
+	<style>
+
+	/* CSS */
+	.map-invert {
+	  filter: invert(1) hue-rotate(180deg) saturate(0.9) contrast(0.95);
+	  -webkit-filter: invert(1) hue-rotate(180deg) saturate(0.9) contrast(0.95);
+	}
+	
+	</style>
+
 </head>
 
 <body class="layout-boxed nice-scroll-on mobile-tb-hide button-stroke no-content-padding header-classic header-boxed minimalist-header-no sticky-header sticky-white ab-hide subheader-both-center menuo-no-borders menuo-right logo-no-margin logo-no-sticky-padding footer-copy-center">
@@ -101,7 +111,9 @@
                                         <div class="column mcb-column one column_map">
 
                                             <div class="google-map-wrapper no_border">
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.0338306111694!2d-102.3058902994751!3d21.933250845719932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ef2c4b2ff6cf%3A0xf4351fa14efdb1d!2sDr%20Arce%20-%20Dise%C3%B1o%20de%20Sonrisa!5e0!3m2!1ses!2smx!4v1755542760044!5m2!1ses!2smx" width="600" height="450" style="border:0; width: 100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                <iframe class="map-invert"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.0338306111694!2d-102.3058902994751!3d21.933250845719932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ef2c4b2ff6cf%3A0xf4351fa14efdb1d!2sDr%20Arce%20-%20Dise%C3%B1o%20de%20Sonrisa!5e0!3m2!1ses!2smx!4v1755542760044!5m2!1ses!2smx" width="600" height="450" style="border:0; width: 100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div id="overlay-iframe" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;cursor:pointer;" onclick="this.style.display='none';" title="Haz clic para activar el contenido"></div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -355,7 +367,7 @@
                    "featureType":"road.local",
                    "elementType":"geometry",
                    "stylers": [{
-                       "color":"#fff"
+                       "color":"#fffzz"
                     }, {
                        "lightness": 16
                     }]
