@@ -779,12 +779,17 @@ a.button_theme, a.tp-button.button_theme, button, input[type="submit"], input[ty
 	color: #fff;
 }
 .button-stroke a.button.button_theme:not(.action_button), .button-stroke a.button.button_theme:not(.action_button), .button-stroke a.button.button_theme .button_icon i, .button-stroke a.tp-button.button_theme, .button-stroke button, .button-stroke input[type="submit"], .button-stroke input[type="reset"], .button-stroke input[type="button"] {
-	border-color: #daa520;
-	color: #daa520 !important;
+	border-color: var(--color-accent-dark);
+	color: #fff !important;
+	background-color: #000000;
 }
 .button-stroke a.button.button_theme:hover, .button-stroke a.tp-button.button_theme:hover, .button-stroke button:hover, .button-stroke input[type="submit"]:hover, .button-stroke input[type="reset"]:hover, .button-stroke input[type="button"]:hover {
-	background-color: #daa520 !important;
+	background-color: var(--color-accent-dark) !important;
 	color: #fff !important;
+	border-color: var(--color-accent);
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 3px;
 }
 a.mfn-link {
 	color: #656B6F;

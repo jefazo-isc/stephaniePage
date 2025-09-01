@@ -21,11 +21,11 @@
     <link rel="shortcut icon" href="images/favicon.ico">
 
     <!-- FONTS -->
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Quattrocento:300,400,400italic,700,700italic'>
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,400italic,700,700italic'>
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quattrocento:300,400,400italic,700,700italic'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,400italic,700,700italic'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,300,400'>
 
     <!-- CSS -->
     <link rel='stylesheet' href='../../css/global.css'>
@@ -185,34 +185,41 @@
                     </div>
                 </div>
 
-<div class="section mcb-section equal-height-wrap full-width" style="padding-top:0px; padding-bottom:0px;">
-    <div class="section_wrapper mcb-section-inner">
-        <div class="wrap mcb-wrap one-second  valign-top clearfix" style="padding:80px 40px 20px; background-color:#2a2a2a">
-            <div class="mcb-wrap-inner">
-                <div class="column mcb-column one column_column">
-                    <div class="column_attr align_center">
-                        <h4>NUESTRO EQUIPO MULTIDISCIPLINARIO</h4>
-                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                        <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                            <div class="image_wrapper"><img class="scale-with-grid" src="images/home_medic2_sep.png" width="54" height="3" /> </div>
+    <div class="section mcb-section equal-height-wrap full-width" style="padding-top:0px; padding-bottom:0px;">
+        <div class="section_wrapper mcb-section-inner">
+            <div class="wrap mcb-wrap one valign-top clearfix" style="padding:80px 40px 20px; background-color:#2a2a2a">
+                <div class="mcb-wrap-inner">
+                    <div class="column mcb-column one column_column">
+                        <div class="column_attr align_center">
+                            <h4>NUESTRO EQUIPO MULTIDISCIPLINARIO</h4>
+                            <hr class="no_line" style="margin: 0 auto 25px;" />
+                            <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
+                                <div class="image_wrapper"><img class="scale-with-grid" src="images/home_medic2_sep.png" width="54" height="3" /> </div>
+                                </div>
+                            <hr class="no_line" style="margin: 0 auto 25px;" />
+                            <p class="big">
+                                Nuestro equipo está capacitado constantemente bajo protocolos personalizados, asegurando la más alta calidad en cada tratamiento. (Galería o Tour Virtual pendiente)</p>
+                            <hr class="no_line" style="margin: 0 auto 25px;" />
+                            <a class="button  button_right button_size_2 button_js" href="#"><span class="button_icon"><i class="fa-solid fa-chevron-right"></i></span><span class="button_label">Conoce a nuestro equipo</span></a> 
+                            </div>
                         </div>
-                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                        <p class="big">
-                            Nuestro equipo está capacitado constantemente bajo protocolos personalizados, asegurando la más alta calidad en cada tratamiento. (Galería o Tour Virtual pendiente)</p>
-                        <hr class="no_line" style="margin: 0 auto 25px;" />
-                        <a class="button  button_right button_size_2 button_js" href="#"><span class="button_icon"><i class="fa-solid fa-chevron-right"></i></span><span class="button_label">Conoce a nuestro equipo</span></a> </div>
-                </div>
-            </div>
-        </div>
-        <div class="wrap mcb-wrap one-second valign-top clearfix" style="background-color: #535353; background-image:url(../../img/20.webp); background-size: contain; background-repeat:no-repeat; background-position:center; aspect-ratio: 9/16; min-height: 300px;">
-            <div class="mcb-wrap-inner">
-                <div class="column mcb-column one column_divider">
-                    <hr class="no_line" style="margin: 0;" />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+    <!-- Carrusel-->
+    <div id="photo-carousel" style="position: relative; width: 100%; overflow: hidden;">
+        <div id="carousel-images" style="display: flex; transition: transform 0.5s ease-in-out;">
+            <img src="../../img/5.webp" style="width: 100%; flex-shrink: 0;" alt="Foto 1">
+            <img src="../../img/8.webp" style="width: 100%; flex-shrink: 0;" alt="Foto 2">
+            <img src="../../img/12.webp" style="width: 100%; flex-shrink: 0;" alt="Foto 3">
+            <img src="../../img/21.webp" style="width: 100%; flex-shrink: 0;" alt="Foto 4">
+        </div>
+        <button id="prev-btn" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); z-index: 10; font-size: 18px; font-weight: bold; background-color: #a39070 !important;">&#10094;</button>
+        <button id="next-btn" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); z-index: 10; font-size: 18px; font-weight: bold; background-color: #a39070 !important;">&#10095;</button>
+    </div>
 
                 <div class="section mcb-section" style="padding-top:50px; padding-bottom:20px; background-color: #000;">
                     <div class="section_wrapper mcb-section-inner">
@@ -329,7 +336,7 @@
                                 <p>
                                     En Dental Clinic Boutique By Dr. Arce transformamos sonrisas con un enfoque integral, ético y altamente especializado.</p>
                                
-                                <a class="button  button_right button_size_2 button_stroke_custom button_js" href="content/medic2/our-centre.html" style="border-color:#fff !important; color:#fff;"><span class="button_icon"><i class="fa-solid fa-chevron-right"  style="color:#fff !important;"></i></span><span class="button_label">Clínica</span></a> </div>
+                                <a class="button  button_right button_size_2 button_stroke_custom button_js" href="content/medic2/our-centre.html" style="border-color:#fff !important; color:#fff; font-weight: bolder;"><span class="button_icon"><i class="fa-solid fa-chevron-right"  style="color:#fff !important;"></i></span><span class="button_label">Clínica</span></a> </div>
                         </aside>
              
                     </div>
@@ -378,6 +385,29 @@
                 var mobileLogoH = mobileEl.height();
                 mobileEl.attr("src","../../img/logo.png").width(mobileLogoW).height(mobileLogoH);
             }
+        });
+    </script>
+    <script>
+        const carouselImages = document.getElementById('carousel-images');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        let currentIndex = 0;
+        const totalImages = carouselImages.children.length;
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carouselImages.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
         });
     </script>
 </body>
