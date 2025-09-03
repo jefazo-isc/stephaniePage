@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         <!-- Opciones del menú -->
         <!-- Opción 1: Agendar cita -->
-        <a href="https://wa.me/+15550571107?text=Hola,%20quiero%20agendar%20una%20cita" class="wa-menu-item">
+        <a href="https://wa.me/+524493395953?text=Hola,%20quiero%20agendar%20una%20cita" class="wa-menu-item">
             <div class="wa-menu-icon">
                 <i class="fa-solid fa-calendar-days"></i>
             </div>
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
         
         <!-- Opción 2: Más información -->
-        <a href="https://wa.me/+15550571107?text=Hola,%20me%20gustaría%20más%20información" class="wa-menu-item">
+        <a href="https://wa.me/+524493395953?text=Hola,%20me%20gustaría%20más%20información" class="wa-menu-item">
             <div class="wa-menu-icon">
                 <i class="fa-solid fa-circle-info"></i>
             </div>
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
         
         <!-- Opción 3: Oportunidades Laborales
-        <a href="https://wa.me/+15550571107?text=Hola,%20quiero%20trabajar%20con%20ustedes" class="menu-item">
+        <a href="https://wa.me/+524493395953?text=Hola,%20quiero%20trabajar%20con%20ustedes" class="menu-item">
             <div class="menu-icon">
                 <i class="fas fa-briefcase"></i>
             </div>
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </a> -->
         
         <!-- Opción 4: Otras Consultas 
-        <a href="https://wa.me/+15550571107?text=Hola,%20tengo%20otra%20consulta" class="menu-item">
+        <a href="https://wa.me/+524493395953?text=Hola,%20tengo%20otra%20consulta" class="menu-item">
             <div class="menu-icon">
                 <i class="fas fa-comments"></i>
             </div>
