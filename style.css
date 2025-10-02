@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-    --primary-color: #f8b4d9;
-    --secondary-color: #ff69b4;
-    --accent-color: #e75480;
+    --primary-color: #e6c79c; /* Color crema medio */
+    --secondary-color: #d4af37; /* Color dorado */
+    --accent-color: #c5b358; /* Dorado más oscuro */
     --text-color: #222222; /* Color de texto más oscuro */
     --shadow-color: rgba(0, 0, 0, 0.4); /* Color para las sombras */
-    --bg-color: #fff0f5;
+    --bg-color: #fffaf0; /* Fondo crema claro */
     --white: #ffffff;
     --font-parisienne: 'Parisienne', cursive;
     --font-poppins: 'Poppins', sans-serif;
