@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glamour Estética</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pop_up.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="assets/js/buttons.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -41,10 +48,14 @@
             <div class="glow-dot"></div>
             <div class="glow-dot scroll-animated-dot"></div>
             <div class="glow-dot"></div>
+            <div class="glow-dot scroll-animated-dot"></div>
+            <div class="glow-dot"></div>
+            <div class="glow-dot scroll-animated-dot"></div>
+            <div class="glow-dot"></div>
         </div>
         <nav>
             <div class="logo">
-                <h1>Glamour Estética</h1>
+                <h1>ROME Harmony Clinic</h1>
             </div>
             <ul>
                 <li><a href="#servicios">Servicios</a></li>
@@ -66,33 +77,43 @@
             <div class="service-container">
                 <div class="service-card">
                     <h3>Ácido Hialurónico 💉</h3>
+                    <img src="assets/img/Manual Rome-10.jpg" style="width:300px;">
                     <p>Labios 👄, Nariz 👃, Mentón, Ojeras 👁️, Pómulo, Surcos, Marcaje</p>
                     <ul>
                         <li><strong>Corta duración:</strong> $4,800 pesos 💸</li>
                         <li><strong>Larga duración:</strong> $6,600 pesos 💸</li>
                     </ul>
+                    <button type="button" class="btn btn-light btn-lg btn-popup" data-title="Ácido Hialurónico INFORMACION DE EJEMPLO" data-info="Tratamiento para labios, nariz, mentón, ojeras, pómulo, surcos y marcaje. Precios: corta duración $4,800, larga duración $6,600.">Ver más</button>
                 </div>
                 <div class="service-card">
                     <h3>Botox 💉</h3>
+                    <img src="assets/img/Manual Rome-10.jpg" style="width:300px;">
                     <ul>
                         <li><strong>3 Zonas:</strong> $5,500 pesos 💸</li>
                         <li><strong>1 Zona:</strong> $2,000 pesos 💸</li>
                     </ul>
+                    <button type="button" class="btn btn-light btn-lg btn-popup" data-title="Botox INFORMACION DE EJEMPLO" data-info="Aplicación en 1 o 3 zonas. Precios: 3 zonas $5,500, 1 zona $2,000.">Ver más</button>
                 </div>
                 <div class="service-card">
                     <h3>Hialuronidasa 💉</h3>
+                    <img src="assets/img/Manual Rome-10.jpg" style="width:300px;">
                     <p>$2,500 pesos 💸</p>
+                    <button type="button INFORMACION DE EJEMPLO" class="btn btn-light btn-lg btn-popup" data-title="Hialuronidasa" data-info="Elimina ácido hialurónico no deseado. Precio: $2,500.">Ver más</button>
                 </div>
                 <div class="service-card">
                     <h3>Bioestimuladores de Colágeno 💉</h3>
+                    <img src="assets/img/Manual Rome-10.jpg" style="width:300px;">
                     <ul>
                         <li><strong>1 Jeringa:</strong> $14,000 pesos 💸</li>
                         <li><strong>2 Jeringas:</strong> $22,000 pesos 💸</li>
                     </ul>
+                    <button type="button" class="btn btn-light btn-lg btn-popup" data-title="Bioestimuladores de Colágeno INFORMACION DE EJEMPLO" data-info="Estimula la producción de colágeno. Precios: 1 jeringa $14,000, 2 jeringas $22,000.">Ver más</button>
                 </div>
-                 <div class="service-card">
+                <div class="service-card">
                     <h3>Enzimas 💉</h3>
+                    <img src="assets/img/Manual Rome-10.jpg" style="width:300px;">
                     <p><strong>1 Sesión:</strong> $2,500 pesos 💸</p>
+                    <button type="button INFORMACION DE EJEMPLO" class="btn btn-light btn-lg btn-popup" data-title="Enzimas" data-info="Tratamiento con enzimas. Precio por sesión: $2,500.">Ver más</button>
                 </div>
             </div>
         </section>
@@ -102,17 +123,21 @@
             <div class="package-container">
                 <div class="package-card">
                     <h3>Paquete de 3 Jeringas 💉</h3>
+                    <img src="assets/img/Manual Rome-10.jpg" style="width:300px;">
                     <ul>
                         <li><strong>Corta duración:</strong> $13,600 💸</li>
                         <li><strong>Larga duración:</strong> $18,000 💸</li>
                     </ul>
+                    <button type="button" class="btn btn-light btn-lg btn-popup" data-title="Paquete de 3 Jeringas INFORMACION DE EJEMPLO" data-info="Incluye 3 jeringas de ácido hialurónico. Precios: corta duración $13,600, larga duración $18,000.">Ver más</button>
                 </div>
                 <div class="package-card">
                     <h3>Paquete de 6 Jeringas 💉💉</h3>
+                    <img src="assets/img/Manual Rome-10.jpg" style="width:300px;">
                     <ul>
                         <li><strong>Corta duración:</strong> $25,900 💸</li>
                         <li><strong>Larga duración:</strong> $33,900 💸</li>
                     </ul>
+                    <button type="button" class="btn btn-light btn-lg btn-popup" data-title="Paquete de 6 Jeringas INFORMACION DE EJEMPLO" data-info="Incluye 6 jeringas de ácido hialurónico. Precios: corta duración $25,900, larga duración $33,900.">Ver más</button>
                 </div>
             </div>
         </section>
@@ -122,33 +147,45 @@
             <div class="promo-container">
                 <div class="promo-card">
                     <h3>Ácido Hialurónico en Promoción 💉</h3>
+                    <img src="assets/img/Manual Rome-10.jpg" style="width:300px;">
                     <ul>
                         <li><strong>1 jeringa corta duración:</strong> $4,500 💸</li>
                         <li><strong>2 jeringas corta duración:</strong> $7,500 💸</li>
                         <li><strong>1 jeringa larga duración:</strong> $5,500 💸</li>
                         <li><strong>2 jeringas larga duración:</strong> $8,500 💸</li>
                     </ul>
+                    <button type="button" class="btn btn-light btn-lg btn-popup" data-title="Ácido Hialurónico en Promoción INFORMACION DE EJEMPLO" data-info="Tratamiento para labios, nariz, mentón, ojeras, pómulo, surcos y marcaje. Precios: corta duración $4,500, larga duración $5,500.">Ver más</button>
                 </div>
                 <div class="promo-card">
                     <h3>Botox 3 zonas 💉</h3>
+                    <img src="assets/img/Manual Rome-10.jpg" style="width:300px;">
                     <p>$4,900 💸</p>
+                    <button type="button" class="btn btn-light btn-lg btn-popup" data-title="Botox 3 zonas INFORMACION DE EJEMPLO" data-info="Aplicación en 1 o 3 zonas. Precios: 3 zonas $5,500, 1 zona $2,000.">Ver más</button>
                 </div>
                 <div class="promo-card">
                     <h3>Bioestimuladores de Colágeno 💉</h3>
+                    <img src="assets/img/Manual Rome-10.jpg" style="width:300px;">
                     <p>$9,900 💸</p>
+                    <button type="button" class="btn btn-light btn-lg btn-popup" data-title="Bioestimuladores de Colágeno INFORMACION DE EJEMPLO" data-info="Estimula la producción de colágeno. Precios: 1 jeringa $14,000, 2 jeringas $22,000.">Ver más</button>
                 </div>
                 <div class="promo-card">
                     <h3>Paquete Perfil (3 jeringas corta duración) 💉</h3>
+                    <img src="assets/img/Manual Rome-10.jpg" style="width:300px;">
                     <p>$12,000 💸</p>
+                    <button type="button" class="btn btn-light btn-lg btn-popup" data-title="Paquete Perfil INFORMACION DE EJEMPLO" data-info="Incluye 3 jeringas de ácido hialurónico de corta duración. Precio: $12,000.">Ver más</button>
                 </div>
                 <div class="promo-card">
                     <h3>Paquete Armonización (6 jeringas larga duración) 💉💉</h3>
+                    <img src="assets/img/Manual Rome-10.jpg" style="width:300px;">
                     <p>$24,000 💸</p>
+                    <button type="button" class="btn btn-light btn-lg btn-popup" data-title="Paquete Armonización INFORMACION DE EJEMPLO" data-info="Incluye 6 jeringas de ácido hialurónico de larga duración. Precio: $24,000.">Ver más</button>
                 </div>
                 <div class="promo-card">
                     <h3>Paquete Antienvejecimiento 😌</h3>
+                    <img src="assets/img/Manual Rome-10.jpg" style="width:300px;">
                     <p>Bioestimuladores + Colágeno</p>
                     <p>$13,900 💸</p>
+                    <button type="button" class="btn btn-light btn-lg btn-popup" data-title="Paquete Antienvejecimiento INFORMACION DE EJEMPLO" data-info="Incluye bioestimuladores y colágeno. Precio: $13,900.">Ver más</button>
                 </div>
             </div>
         </section>
@@ -198,6 +235,15 @@
             </div>
         </div>
     </footer>
+<!-- Popups para cada boton -->
+<div id="popup" class="popup hidden">
+    <div class="popup-content">
+        <button class="close-btn" aria-label="Cerrar">&times;</button>
+        <h3 id="popup-title">Más Información</h3>
+        <p id="popup-info">Aquí puedes agregar más detalles sobre el servicio seleccionado.</p>
+    </div>
+</div>
+
 <script>
         const body = document.body;
         const dots = document.querySelectorAll('.scroll-animated-dot');
@@ -235,7 +281,5 @@
             }
         });
     </script>
-</body>
-</html>
 </body>
 </html>

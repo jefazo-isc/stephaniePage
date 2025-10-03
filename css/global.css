@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Agrandir';
+    src: url('../assets/fonts/Agrandir/Agrandir-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Agrandir Bold';
+    src: url('../assets/fonts/Agrandir/Agrandir-TextBold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Agrandir Tight';
+    src: url('../assets/fonts/Agrandir/Agrandir-Tight.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hatton Ultralight';
+    src: url('../assets/fonts/Hatton/PP Hatton Ultralight 200.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hatton Medium';
+    src: url('../assets/fonts/Hatton/PP Hatton Medium 500.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hatton Bold';
+    src: url('../assets/fonts/Hatton/PP Hatton Bold 700.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #e6c79c; /* Color crema medio */
+    --secondary-color: #d4af37; /* Color dorado */
+    --accent-color: #c5b358; /* Dorado más oscuro */
+    --text-color: #222222; /* Color de texto más oscuro */
+    --shadow-color: rgba(0, 0, 0, 0.4); /* Color para las sombras */
+    --bg-color: #fffaf0; /* Fondo crema claro */
+    --white: #ffffff;
+    --font-parisienne: 'Parisienne', cursive;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-agrandir: 'Agrandir', sans-serif;
+    --font-agrandir-bold: 'Agrandir Bold', sans-serif;
+    --font-agrandir-tight: 'Agrandir Tight', sans-serif;
+    --font-hatton: 'Hatton Ultralight', serif;
+    --font-hatton-medium: 'Hatton Medium', serif;
+    --font-hatton-bold: 'Hatton Bold', serif;
+}
+
+h1, h2{
+    font-family: var(--font-hatton-bold);
+}
+h3, h4, h5, h6 {
+    font-family: var(--font-hatton-medium);
+}
+p, li, a, span, button, input, textarea {
+    font-family: var(--font-agrandir);
+}
