@@ -7,7 +7,6 @@ function updateCountdown(nowMs) {
     let diff = deadlineMs - nowMs;
 
     if (diff <= 0) {
-    // Si ya pasó la fecha, ocultamos toda la sección
         section.style.display = 'none';
         return;
     }
@@ -26,7 +25,6 @@ function updateCountdown(nowMs) {
     document.getElementById('segundos').textContent = pad(seconds);
 }
 
-  // Consulta inicial a WorldTimeAPI (solo una vez)
 fetch("https://worldtimeapi.org/api/timezone/America/Mexico_City")
 .then(res => res.json())
 .then(data => {
@@ -37,14 +35,11 @@ fetch("https://worldtimeapi.org/api/timezone/America/Mexico_City")
     const timer = setInterval(() => {
         nowMs += 1000;
         updateCountdown(nowMs);
-
-        // Si ya pasó la fecha, detenemos el intervalo
         if (nowMs >= deadlineMs) clearInterval(timer);
         }, 1000);
     })
     .catch(err => {
       console.error("Error obteniendo hora:", err);
-      // Fallback: usar reloj local
       let nowMs = Date.now();
       updateCountdown(nowMs);
       const timer = setInterval(() => {
