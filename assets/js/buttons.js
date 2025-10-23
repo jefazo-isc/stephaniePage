@@ -1,4 +1,3 @@
-// Selección de elementos
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Script buttons.js cargado correctamente');
     
