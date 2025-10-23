@@ -356,3 +356,99 @@ footer {
         font-size: 2.5rem;
     }
 }
+
+.countdown-section {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-section .countdown{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+.countdown-section .countdown .countdown-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+.countdown-section .countdown .countdown-item .countdown-number{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.countdown-section .countdown .countdown-item .countdown-label{
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+    .countdown-section .countdown {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .countdown-section .countdown .countdown-item {
+        flex: 1 1 calc(50% - 1rem); 
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .countdown-section {
+        padding: 2rem 1rem;
+        border-radius: 10px;
+    }
+
+    .countdown-section .countdown {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .countdown-section .countdown .countdown-item {
+        
+        max-width: 220px;
+        margin: 0.5rem;
+    }
+
+    .countdown-section .countdown .countdown-item .countdown-number {
+        font-size: 2.5rem;
+    }
+
+    .countdown-section .countdown .countdown-item .countdown-label {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown-section {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .countdown-section .countdown {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .countdown-section .countdown .countdown-item {
+        flex: 1 1 100%;
+        max-width: none;
+        margin: 0.5rem 0;
+    }
+
+    .countdown-section .countdown .countdown-item .countdown-number {
+        font-size: 2rem;
+    }
+
+    .countdown-section .countdown .countdown-item .countdown-label {
+        font-size: 0.9rem;
+    }
+}
