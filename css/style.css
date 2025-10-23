@@ -33,7 +33,7 @@ header {
     color: var(--white);
     position: relative; /* Contenedor para elementos absolutos como la nav y los brillos */
     overflow: hidden;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    height: 50vh; /* Ocupa la mitad de  la altura de la pantalla */
     display: flex;
     flex-direction: column; /* Apila la nav y el hero */
     justify-content: center; /* Centra el hero verticalmente */
