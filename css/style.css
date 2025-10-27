@@ -1,18 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@400;600;700&display=swap');
+
 
 
 :root {
-    --primary-color: #e6c79c; /* Color crema medio */
-    --secondary-color: #d4af37; /* Color dorado */
-    --accent-color: #c5b358; /* Dorado más oscuro */
-    --text-color: #222222; /* Color de texto más oscuro */
-    --shadow-color: rgba(0, 0, 0, 0.4); /* Color para las sombras */
-    --bg-color: #fffaf0; /* Fondo crema claro */
+    /*Nueva paleta de colores*/
+    --color-blue: #173c57;
+    --color-light-blue: #338892;
+    --color-gold: #a79353;
+    --color-yellow-light: #fbdf8f;
+    --color-cream-dark: #e7e0d2;
+    --color-brown: #474131;
     --white: #ffffff;
-    --font-parisienne: 'Parisienne', cursive;
-    --font-poppins: 'Poppins', sans-serif;
     
+    /* Mapeo de colores para usar en el sitio */
+    --primary-color: var(--color-blue); /* Azul oscuro como color principal */
+    --secondary-color: var(--color-gold); /* Dorado */
+    --accent-color: var(--color-light-blue); /* Azul claro para acentos */
+    --text-color: var(--color-brown); /* Café para texto */
+    --bg-color: var(--color-cream-dark); /* Crema oscuro para fondo */
+    --card-bg: var(--white); /* Blanco para cards */
+    --highlight-color: var(--color-yellow-light); /* Amarillo claro para highlights */
+    --shadow-color: rgba(23, 60, 87, 0.15); /* Sombra azul suave */
     
+    /* Fuentes */
+    --font-agrandir: 'Agrandir', sans-serif;
+    --font-agrandir-bold: 'Agrandir Bold', sans-serif;
+    --font-hatton: 'Hatton Ultralight', serif;
+    --font-hatton-medium: 'Hatton Medium', serif;
+    --font-hatton-bold: 'Hatton Bold', serif;
 }
 
 * {
@@ -25,33 +39,34 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+    font-family: var(--font-agrandir);
 }
 
 /* --- HEADER CORREGIDO --- */
 header {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-light-blue) 100%);
     color: var(--white);
-    position: relative; /* Contenedor para elementos absolutos como la nav y los brillos */
+    position: relative;
     overflow: hidden;
-    height: 50vh; /* Ocupa la mitad de  la altura de la pantalla */
+    min-height: 100vh; /* Altura mínima de pantalla completa */
     display: flex;
-    flex-direction: column; /* Apila la nav y el hero */
-    justify-content: center; /* Centra el hero verticalmente */
-    align-items: center; /* Centra el hero horizontalmente */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 2rem;
 }
 
 /* Barra de navegación posicionada en la parte superior */
 nav {
-    position: absolute; /* La sacamos del flujo normal */
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%; /* Usamos padding para el espaciado lateral */
-    z-index: 10; /* La ponemos por encima de todo */
-    background: rgba(0,0,0,0.1); /* Fondo sutil para que se lea mejor sobre los brillos */
+    padding: 1rem 5%;
+    z-index: 10;
+    background: var(--color-blue);
+    backdrop-filter: blur(10px);
 }
 
 nav ul {
@@ -67,11 +82,12 @@ nav ul li a {
     color: var(--white);
     text-decoration: none;
     font-weight: 600;
+    font-family: var(--font-agrandir-bold);
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: var(--accent-color);
+    color: var(--color-yellow-light);
 }
 
 /* Fondo animado */
@@ -89,7 +105,6 @@ header .background-glow-container {
 }
 
 /* Ajustes para brillos más pequeños y notorios */
-/* Busca y modifica esta regla */
 .glow-dot {
     position: absolute;
     border-radius: 50%;
@@ -97,10 +112,9 @@ header .background-glow-container {
     animation: glow-animation 7s infinite ease-in-out;
     transform-origin: center center;
     background: radial-gradient(circle, 
-        rgba(255, 255, 255, 0.9) 0%,
-        rgba(255, 255, 255, 0) 70%
+        rgba(251, 223, 143, 0.9) 0%,
+        rgba(251, 223, 143, 0) 70%
     );
-    /* Añadimos una transición para suavizar el movimiento del scroll */
     transition: transform 0.3s ease-out; 
 }
 /* Posiciones y tamaños para los 30 nuevos brillos */
@@ -145,43 +159,57 @@ header .background-glow-container {
 .hero {
     text-align: center;
     position: relative;
-    z-index: 1;
+    z-index: 5;
+    margin-top: 4rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
 }
 
 .hero h2 {
     font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--white);
+    font-weight: 200;
+    font-family: var(--font-hatton);
+    color: var(--color-yellow-light);
     text-shadow: 2px 2px 6px var(--shadow-color);
 }
 
 .hero h1 {
     font-size: 4.5rem;
     margin: 1rem 0;
+    font-family: var(--font-hatton-bold);
     color: var(--white);
     text-shadow: 3px 3px 8px var(--shadow-color);
 }
 
 .logo h1 {
     font-size: 1.5rem;
+    font-family: var(--font-hatton-bold);
+    color: var(--color-gold);
     text-shadow: 1px 1px 3px var(--shadow-color);
 }
 
 .cta {
     display: inline-block;
-    background-color: var(--white);
-    color: var(--accent-color);
+    background-color: var(--color-gold);
+    color: var(--white);
     padding: 0.8rem 2rem;
     text-decoration: none;
     font-weight: 700;
+    font-family: var(--font-agrandir-bold);
     border-radius: 25px;
     margin-top: 1rem;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .cta:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px var(--accent-color);
+    background-color: var(--color-yellow-light);
+    color: var(--color-blue);
+    box-shadow: 0 0 20px rgba(251, 223, 143, 0.6);
 }
 
 /* --- SECCIONES PRINCIPALES --- */
@@ -199,7 +227,8 @@ h2 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
-    color: var(--accent-color);
+    font-family: var(--font-hatton-bold);
+    color: var(--color-blue);
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
@@ -211,33 +240,53 @@ h2 {
 }
 
 .service-card, .package-card, .promo-card {
-    background-color: var(--white);
+    background-color: var(--card-bg);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px var(--shadow-color);
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid transparent;
 }
 
 .service-card:hover, .package-card:hover, .promo-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(23, 60, 87, 0.25);
+    border-color: var(--color-light-blue);
 }
 
-/* Emoji estático decorativo en las tarjetas */
 .service-card::before, .package-card::before, .promo-card::before {
     content: '✨';
     position: absolute;
     top: -20px;
     right: -20px;
     font-size: 4rem;
-    color: var(--primary-color);
-    opacity: 0.3;
+    color: var(--color-yellow-light);
+    opacity: 0.4;
 }
 
 .service-card h3, .package-card h3, .promo-card h3 {
-    color: var(--secondary-color);
+    color: var(--color-gold);
+    font-family: var(--font-hatton-medium);
     margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.service-card p, .package-card p, .promo-card p {
+    font-family: var(--font-agrandir);
+    color: var(--text-color);
+}
+
+.service-card img, .package-card img, .promo-card img {
+    border-radius: 10px;
+    margin: 1rem 0;
+    box-shadow: 0 3px 10px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.service-card img:hover, .package-card img:hover, .promo-card img:hover {
+    transform: scale(1.05);
 }
 
 .service-card ul, .package-card ul, .promo-card ul {
@@ -247,21 +296,59 @@ h2 {
 
 .service-card ul li, .package-card ul li, .promo-card ul li {
     margin-bottom: 0.5rem;
+    font-family: var(--font-agrandir);
+    position: relative;
+    padding-left: 1.5rem;
 }
 
-/* --- FOOTER --- */
+.service-card ul li::before, .package-card ul li::before, .promo-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-light-blue);
+    font-weight: bold;
+}
+
+/* Estilos para botones de las cards */
+.btn-popup {
+    background-color: var(--color-light-blue);
+    color: var(--white);
+    border: none;
+    font-family: var(--font-agrandir-bold);
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-popup:hover {
+    background-color: var(--color-blue);
+    color: var(--color-yellow-light);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(23, 60, 87, 0.3);
+}
+
+
 footer {
-    background-color: var(--primary-color); /* Color base sólido como el header */
+    background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-light-blue) 100%);
     color: var(--white);
     text-align: center;
-    padding: 4rem 0; /* Un poco más de padding para que se luzca el fondo */
-    position: relative; /* Indispensable para contener los brillos */
-    overflow: hidden; /* Para que los brillos no se salgan */
+    padding: 4rem 0; 
+    position: relative; 
+    overflow: hidden;
 }
 
 .footer-content {
     position: relative;
-    z-index: 1; /* Pone el contenido por encima del fondo animado (que tiene z-index: 0) */
+    z-index: 1; 
+}
+
+.footer-content h2 {
+    color: var(--white);
+    font-family: var(--font-hatton-bold);
+}
+
+.footer-content p {
+    font-family: var(--font-agrandir);
+    font-size: 1.1rem;
 }
 
 
@@ -269,15 +356,15 @@ footer {
     color: var(--white);
     font-size: 1.5rem;
     margin: 0 1rem;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .social-icons a:hover {
-    color: var(--accent-color);
+    color: var(--color-yellow-light);
+    transform: scale(1.2);
 }
 
-/* --- ANIMACIÓN --- */
-/* Nueva animación para los brillos del fondo (más pronunciada) */
+
 @keyframes glow-animation {
     0% { opacity: 0.2; }
     50% { opacity: 1; }
@@ -285,7 +372,6 @@ footer {
 }
 
 
-/* Estilo para la estela (inicialmente invisible) */
 .scroll-animated-dot::after {
     content: '';
     position: absolute;
@@ -295,38 +381,115 @@ footer {
     height: 100%;
     border-radius: 50%;
     background: radial-gradient(circle, 
-        rgba(255, 255, 255, 0.5) 0%,
-        rgba(255, 255, 255, 0) 80%
+        rgba(251, 223, 143, 0.5) 0%,
+        rgba(251, 223, 143, 0) 80%
     );
-    opacity: 0; /* Oculta por defecto */
+    opacity: 0;
     transform-origin: center;
-    
-    /* Transición suave para que la estela aparezca y desaparezca */
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-    z-index: -1; /* La ponemos detrás del punto principal */
+    z-index: -1;
 }
 
-/* Estilo que se activa al hacer scroll (la estela se hace visible y se estira) */
+
 .is-scrolling .scroll-animated-dot::after {
-    opacity: 1; /* Hacemos visible la estela */
-    /* Estiramos la estela para crear el efecto de rastro */
+    opacity: 1;
     transform: translate(-50%, -50%) scale(1.5, 5); 
+}
+
+
+.countdown-section {
+    background: transparent;
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 0;
+}
+
+.countdown-section h2 {
+    color: var(--white);
+    font-family: var(--font-hatton-bold);
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.countdown-section .countdown-text {
+    font-family: var(--font-hatton-medium);
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem 0;
+    color: var(--white);
+}
+
+.countdown-section .countdown-highlight {
+    font-family: var(--font-hatton-bold);
+    font-size: 2rem;
+    margin: 0;
+    color: var(--color-yellow-light);
+}
+
+.countdown-section .countdown{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.countdown-section .countdown .countdown-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1.5rem 2rem;
+    min-width: 110px;
+    border: 2px solid rgba(251, 223, 143, 0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.countdown-section .countdown .countdown-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-yellow-light);
+}
+
+.countdown-section .countdown .countdown-item .countdown-number{
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: var(--font-hatton-bold);
+    color: var(--color-yellow-light);
+    line-height: 1;
+}
+
+.countdown-section .countdown .countdown-item .countdown-label{
+    font-size: 0.9rem;
+    font-family: var(--font-agrandir);
+    color: var(--white);
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 804px) {
-
     header {
-        height: auto; /* La altura se ajusta al contenido en móvil */
-        min-height: 500px;
+        min-height: auto;
+        padding-bottom: 3rem;
     }
 
     nav {
-        position: relative; /* La nav vuelve al flujo normal en móvil */
+        position: relative;
         flex-direction: column;
         gap: 1rem;
-        padding: 1.5rem 1rem;
-        background: transparent; /* Quitamos el fondo sutil en móvil */
+        padding: 1rem;
+        background: rgba(23, 60, 87, 0.5);
     }
 
     nav ul {
@@ -337,15 +500,16 @@ footer {
 
     nav ul li {
         margin-left: 0;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
     }
 
     .hero {
-        padding: 2rem 1rem; /* Menos padding en móvil */
+        padding: 2rem 1rem;
+        margin-top: 2rem;
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hero h2 {
@@ -353,69 +517,28 @@ footer {
     }
 
     h2 {
-        font-size: 2.5rem;
-    }
-}
-
-.countdown-section {
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    padding: 3rem 0;
-    margin-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.countdown-section .countdown{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-}
-.countdown-section .countdown .countdown-item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
-}
-.countdown-section .countdown .countdown-item .countdown-number{
-    font-size: 3rem;
-    font-weight: 700;
-}
-.countdown-section .countdown .countdown-item .countdown-label{
-    font-size: 1.2rem;
-}
-
-@media (max-width: 1024px) {
-    .countdown-section .countdown {
-        flex-wrap: wrap;
-        gap: 0.5rem;
+        font-size: 2rem;
     }
 
-    .countdown-section .countdown .countdown-item {
-        flex: 1 1 calc(50% - 1rem); 
-        margin: 0.5rem;
-    }
-}
-
-@media (max-width: 768px) {
     .countdown-section {
         padding: 2rem 1rem;
-        border-radius: 10px;
+    }
+
+    .countdown-section .countdown-text {
+        font-size: 1.2rem;
+    }
+
+    .countdown-section .countdown-highlight {
+        font-size: 1.5rem;
     }
 
     .countdown-section .countdown {
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 1rem;
     }
 
     .countdown-section .countdown .countdown-item {
-        
-        max-width: 220px;
-        margin: 0.5rem;
+        padding: 1rem 1.5rem;
+        min-width: 90px;
     }
 
     .countdown-section .countdown .countdown-item .countdown-number {
@@ -423,25 +546,51 @@ footer {
     }
 
     .countdown-section .countdown .countdown-item .countdown-label {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
+    header {
+        min-height: auto;
+    }
+
+    nav {
+        padding: 0.75rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1rem;
+    }
+
+    .cta {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
     .countdown-section {
         padding: 1.5rem 0.5rem;
     }
 
+    .countdown-section .countdown-text {
+        font-size: 1rem;
+    }
+
+    .countdown-section .countdown-highlight {
+        font-size: 1.2rem;
+    }
+
     .countdown-section .countdown {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+        gap: 0.75rem;
     }
 
     .countdown-section .countdown .countdown-item {
-        flex: 1 1 100%;
-        max-width: none;
-        margin: 0.5rem 0;
+        padding: 0.75rem 1rem;
+        min-width: 75px;
     }
 
     .countdown-section .countdown .countdown-item .countdown-number {
@@ -449,6 +598,6 @@ footer {
     }
 
     .countdown-section .countdown .countdown-item .countdown-label {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 }

@@ -17,6 +17,18 @@
 </head>
 <body>
 
+    <nav>
+        <div class="logo">
+                <img src="assets/img/rome.png" style="width: 150px; margin: 0; padding: 0;" alt="ROME Harmony Clinic">
+            </div>
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#paquetes">Paquetes</a></li>
+                <li><a href="#promociones">Promociones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
     <header>
         <div class="background-glow-container">
             <div class="glow-dot scroll-animated-dot"></div>
@@ -54,47 +66,37 @@
             <div class="glow-dot scroll-animated-dot"></div>
             <div class="glow-dot"></div>
         </div>
-        <nav>
-            <div class="logo">
-                <h1>ROME Harmony Clinic</h1>
-            </div>
-            <ul>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#paquetes">Paquetes</a></li>
-                <li><a href="#promociones">Promociones</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        
         <div class="hero">
             <h2>realza tu belleza</h2>
             <h1>Con un toque de glamour</h1>
             <a href="#servicios" class="cta">Ver Tratamientos</a>
         </div>
-    </header>
 
-    <!-- Cuenta regresiva -->
-    <section class="countdown-section">
-        <div class="countdown">
-            <div class="countdown-item">
-                <span class="countdown-number" id="dias"></span>
-                <span class="countdown-label">Días</span>
+        
+        <div class="countdown-section">
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="dias"></span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="horas"></span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutos"></span>
+                    <span class="countdown-label">Minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="segundos"></span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
             </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="horas"></span>
-                <span class="countdown-label">Horas</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="minutos"></span>
-                <span class="countdown-label">Minutos</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="segundos"></span>
-                <span class="countdown-label">Segundos</span>
-            </div>
+            <p class="countdown-text">Faltan para que disfrutes de nuestras ofertas</p>
+            <p class="countdown-highlight">¡Prepárate!</p>
         </div>
-        <h2>Faltan para que disfrutes de nuestras ofertas</h2>
-        <h2>¡Prepárate!</h2>
-    </section>
+    </header>
 
     <main>
         <section id="servicios">
@@ -260,7 +262,7 @@
             </div>
         </div>
     </footer>
-<!-- Popups para cada boton -->
+
 <div id="popup" class="popup hidden">
     <div class="popup-content">
         <button class="close-btn" aria-label="Cerrar">&times;</button>
@@ -285,18 +287,13 @@
         }
 
         document.addEventListener('scroll', function() {
-            // 1. Activa la clase para mostrar la estela
             body.classList.add('is-scrolling');
-
-            // 2. Limpia el temporizador anterior para que no se quite la clase antes de tiempo
             clearTimeout(scrollTimeout);
-
-            // 3. Crea un nuevo temporizador que quitará la clase 200ms después de que el usuario DEJE de hacer scroll
+            
             scrollTimeout = setTimeout(() => {
                 body.classList.remove('is-scrolling');
             }, 200);
 
-            // 4. Optimiza el movimiento de los puntos (como antes)
             if (!ticking) {
                 window.requestAnimationFrame(function() {
                     handleScroll();
