@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
       let amount;
 
       if (promoId === 'apartado-500') {
-        amount = 50000; // $500.00 MXN
+        amount = 1000; // $500.00 MXN
       } else {
         return res.status(400).json({ error: 'Promo no válida' });
       }
