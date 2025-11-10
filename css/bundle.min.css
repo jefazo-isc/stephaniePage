@@ -522,11 +522,11 @@ h2 {
 }
 
 .section-header h2::before {
-	right: calc(100%+ 20px)
+	right: calc(100% + 20px)
 }
 
 .section-header h2::after {
-	left: calc(100%+ 20px)
+	left: calc(100% + 20px)
 }
 
 .section-subtitle {
@@ -1465,10 +1465,10 @@ header .header-subtitle-custom {
 		width: 50px
 	}
 	.section-header h2::before {
-		right: calc(100%+ 10px)
+		right: calc(100% + 10px)
 	}
 	.section-header h2::after {
-		left: calc(100%+ 20px)
+		left: calc(100% + 20px)
 	}
 	.section-subtitle h4 {
 		font-size: 1.3rem
