@@ -158,20 +158,6 @@
                         </div>
                         
                         <button class="cta-mostrar-form interest-button" style="width: 100%;">Apartar con $500.00 MXN</button>
-                        
-                        <form class="payment-form" data-promo-id="apartado-500" style="display: none;">
-                          <div class="payment-element">
-                            <div class="payment-element-placeholder">
-                                <div class="spinner"></div>
-                                <span>Cargando método de pago...</span>
-                            </div>
-                          </div>
-                          <button class="submit-button interest-button" style="width: 100%;">
-                            <span class="button-text">Pagar $500.00 MXN</span>
-                          </button>
-                          <div class="payment-message" role="alert"></div>
-                        </form>
-                        
                     </div>
                 </div>
 
@@ -228,20 +214,6 @@
                         </div>
                         
                         <button class="cta-mostrar-form interest-button" style="width: 100%;">Apartar con $500.00 MXN</button>
-                        
-                        <form class="payment-form" data-promo-id="apartado-500" style="display: none;">
-                          <div class="payment-element">
-                            <div class="payment-element-placeholder">
-                                <div class="spinner"></div>
-                                <span>Cargando método de pago...</span>
-                            </div>
-                          </div>
-                          <button class="submit-button interest-button" style="width: 100%;">
-                            <span class="button-text">Pagar $500.00 MXN</span>
-                          </button>
-                          <div class="payment-message" role="alert"></div>
-                        </form>
-                        
                     </div>
                 </div>
             </div>
@@ -270,20 +242,6 @@
                         </div>
                         
                         <button class="cta-mostrar-form interest-button" style="width: 100%;">Apartar con $500.00 MXN</button>
-                        
-                        <form class="payment-form" data-promo-id="apartado-500" style="display: none;">
-                          <div class="payment-element">
-                            <div class="payment-element-placeholder">
-                                <div class="spinner"></div>
-                                <span>Cargando método de pago...</span>
-                            </div>
-                          </div>
-                          <button class="submit-button interest-button" style="width: 100%;">
-                            <span class="button-text">Pagar $500.00 MXN</span>
-                          </button>
-                          <div class="payment-message" role="alert"></div>
-                        </form>
-                        
                     </div>
                 </div>
 
@@ -307,20 +265,6 @@
                         </div>
                         
                         <button class="cta-mostrar-form interest-button" style="width: 100%;">Apartar con $500.00 MXN</button>
-                        
-                        <form class="payment-form" data-promo-id="apartado-500" style="display: none;">
-                          <div class="payment-element">
-                            <div class="payment-element-placeholder">
-                                <div class="spinner"></div>
-                                <span>Cargando método de pago...</span>
-                            </div>
-                          </div>
-                          <button class="submit-button interest-button" style="width: 100%;">
-                            <span class="button-text">Pagar $500.00 MXN</span>
-                          </button>
-                          <div class="payment-message" role="alert"></div>
-                        </form>
-                        
                     </div>
                 </div>
                 
@@ -345,20 +289,6 @@
                         </div>
                         
                         <button class="cta-mostrar-form interest-button" style="width: 100%;">Apartar con $500.00 MXN</button>
-                        
-                        <form class="payment-form" data-promo-id="apartado-500" style="display: none;">
-                          <div class="payment-element">
-                            <div class="payment-element-placeholder">
-                                <div class="spinner"></div>
-                                <span>Cargando método de pago...</span>
-                            </div>
-                          </div>
-                          <button class="submit-button interest-button" style="width: 100%;">
-                            <span class="button-text">Pagar $500.00 MXN</span>
-                          </button>
-                          <div class="payment-message" role="alert"></div>
-                        </form>
-                        
                     </div>
                 </div>
                 
@@ -598,6 +528,27 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal de Pago -->
+    <div id="payment-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+            <h3 class="modal-title">Apartar con $500.00 MXN</h3>
+            <form class="payment-form" data-promo-id="apartado-500">
+                <div class="payment-element">
+                    <div class="payment-element-placeholder">
+                        <div class="spinner"></div>
+                        <span>Cargando método de pago...</span>
+                    </div>
+                </div>
+                <button class="submit-button interest-button" style="width: 100%;">
+                    <span class="button-text">Pagar $500.00 MXN</span>
+                </button>
+                <div class="payment-message" role="alert"></div>
+            </form>
+        </div>
+    </div>
+
 <script src="assets/js/checkout.js" defer></script>
 </body>
 </html>
