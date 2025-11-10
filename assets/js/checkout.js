@@ -12,18 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
     return; // No hay formularios
   }
 
+  // Almacenar instancias de Stripe Elements para reutilizarlas
+  const stripeInstances = new Map();
+
   // 2. Itera sobre CADA formulario para prepararlo
-  allPaymentForms.forEach(form => {
+  allPaymentForms.forEach((form, index) => {
 
     // Busca los componentes de ESTA tarjeta
     const triggerButton = form.previousElementSibling; // El botón "Apartar" que está ANTES del form
-
-    let elements; // Variable para guardar la instancia de Stripe Elements
-    let elementsContainer;
-    let placeholder;
-    let submitButton;
-    let buttonText;
-    let messageContainer;
 
     // Extract promo info from the card
     const promoCard = form.closest('.promo-card');
@@ -40,18 +36,22 @@ document.addEventListener('DOMContentLoaded', () => {
     triggerButton.addEventListener('click', async (e) => {
       e.preventDefault();
 
-      // Open modal instead of showing inline
+      // Verificar si ya existe una instancia para este formulario
+      if (stripeInstances.has(index)) {
+        // Solo abrir el modal, ya tenemos el formulario cargado
+        if (window.PaymentModal) {
+          window.PaymentModal.open(form, promoInfo);
+        }
+        return;
+      }
+
+      // Open modal
       if (window.PaymentModal) {
         window.PaymentModal.open(form, promoInfo);
       }
 
-      // Si ya hicimos clic y cargamos el formulario, no hacer nada más
-      if (form.dataset.initialized === 'true') {
-        return;
-      }
-
-      // Marcar como inicializado
-      form.dataset.initialized = 'true';
+      // Marcar como inicializado para evitar múltiples cargas
+      stripeInstances.set(index, { loading: true });
 
       // Get references to modal elements
       const modalBody = document.querySelector('#payment-modal .modal-body');
@@ -62,14 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Update references to point to the modal elements
-      elementsContainer = modalForm.querySelector('.payment-element');
-      placeholder = modalForm.querySelector('.payment-element-placeholder');
-      submitButton = modalForm.querySelector('.submit-button');
-      buttonText = modalForm.querySelector('.button-text');
-      messageContainer = modalForm.querySelector('.payment-message');
+      const elementsContainer = modalForm.querySelector('.payment-element');
+      const placeholder = modalForm.querySelector('.payment-element-placeholder');
+      const submitButton = modalForm.querySelector('.submit-button');
+      const buttonText = modalForm.querySelector('.button-text');
+      const messageContainer = modalForm.querySelector('.payment-message');
 
-      // 4. AHORA SÍ: Llama al backend para obtener el clientSecret
+      // 4. Llama al backend para obtener el clientSecret
       try {
         const response = await fetch('/api/server', {
           method: 'POST',
@@ -88,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
           throw new Error(backendError);
         }
 
-        // 5. Crear y montar el formulario de Stripe
-        elements = stripe.elements({ clientSecret });
+        // 5. Crear y montar el formulario de Stripe (solo una vez)
+        const elements = stripe.elements({ clientSecret });
         const paymentElement = elements.create('payment');
 
         // Cuando el formulario real esté listo para mostrarse...
@@ -101,62 +100,71 @@ document.addEventListener('DOMContentLoaded', () => {
         // Monta el formulario en el div del modal
         paymentElement.mount(elementsContainer);
 
-        // Set up form submission for the modal form
-        setupFormSubmission(modalForm);
+        // Almacenar la instancia para reutilizarla
+        stripeInstances.set(index, {
+          elements,
+          paymentElement,
+          elementsContainer,
+          submitButton,
+          buttonText,
+          messageContainer,
+          loaded: true
+        });
+
+        // Set up form submission for the modal form (solo una vez)
+        modalForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const instance = stripeInstances.get(index);
+          if (!instance || !instance.elements) {
+            showMessage(messageContainer, 'El formulario de pago no está listo.');
+            return;
+          }
+
+          setLoading(instance.submitButton, instance.buttonText, true);
+
+          try {
+            const returnUrl = `${window.location.origin}/pages/gracias.html`;
+
+            const { error } = await stripe.confirmPayment({
+              elements: instance.elements,
+              confirmParams: {
+                return_url: returnUrl,
+              },
+            });
+
+            if (error.type === 'card_error' || error.type === 'validation_error') {
+              showMessage(instance.messageContainer, error.message);
+            } else if (error) {
+              showMessage(instance.messageContainer, 'Un error inesperado ocurrió.');
+            }
+
+          } catch (integrationError) {
+            console.error(integrationError);
+            showMessage(instance.messageContainer, integrationError.message);
+          }
+
+          setLoading(instance.submitButton, instance.buttonText, false);
+        }, { once: true }); // Solo agregar el listener una vez
 
       } catch (e) {
          if(placeholder) placeholder.textContent = `Error: ${e.message}`;
          console.error(e);
+         stripeInstances.delete(index); // Permitir reintentar en caso de error
       }
-    }); // Fin del listener del botón "Apartar"
+    });
 
-    // 6. Function to set up form submission
-    function setupFormSubmission(targetForm) {
-      targetForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        if (!elements) {
-          showMessage('El formulario de pago no está listo.');
-          return;
-        }
-
-        setLoading(true);
-
-        try {
-          const returnUrl = `${window.location.origin}/pages/gracias.html`;
-
-          const { error } = await stripe.confirmPayment({
-            elements,
-            confirmParams: {
-              return_url: returnUrl,
-            },
-          });
-
-          if (error.type === 'card_error' || error.type === 'validation_error') {
-            showMessage(error.message);
-          } else if (error) {
-            showMessage('Un error inesperado ocurrió.');
-          }
-
-        } catch (integrationError) {
-          console.error(integrationError);
-          showMessage(integrationError.message);
-        }
-
-        setLoading(false);
-      });
-    }
-
-    // --- Funciones de ayuda (específicas para este form) ---
-    function showMessage(messageText) {
-      if (messageContainer) messageContainer.textContent = messageText;
-    }
-
-    function setLoading(isLoading) {
-      if (submitButton) {
-        submitButton.disabled = isLoading;
-        if(buttonText) buttonText.textContent = isLoading ? 'Procesando...' : 'Pagar $500.00 MXN';
-      }
-    }
   }); // Fin del forEach
+
+  // --- Funciones de ayuda ---
+  function showMessage(messageContainer, messageText) {
+    if (messageContainer) messageContainer.textContent = messageText;
+  }
+
+  function setLoading(submitButton, buttonText, isLoading) {
+    if (submitButton) {
+      submitButton.disabled = isLoading;
+      if(buttonText) buttonText.textContent = isLoading ? 'Procesando...' : 'Pagar $500.00 MXN';
+    }
+  }
 });
