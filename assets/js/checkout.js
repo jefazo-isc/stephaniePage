@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- ¡IMPORTANTE! ---
   // Esta es tu clave PUBLICABLE de prueba
-  const stripe = Stripe('pk_test_51SRzskEmJZ32jwRip4ksQo99OAVE7QpiQH23ADyEJhOPudGJuLNyh6EMdJdfPaVeNhAOLfQv8t8lar0Tp6YxVTN100aKvpdtSX');
+  const stripe = Stripe('pk_live_51SRzsBIKacSnSmO53KhqZC1tAwEgMYOU2V2o5WW2dEWZCe4BpiMARkHdhEC8HDiZhRXGRKSSrfKWdMx62tj917Ks00afZo71cn');
 
   // 1. Busca todos los formularios (que están ocultos)
   const allPaymentForms = document.querySelectorAll('.payment-form');
