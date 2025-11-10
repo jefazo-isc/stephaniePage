@@ -28,8 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Función para abrir el modal
   async function openModal() {
-    console.log('Abriendo modal...');
-
     // Mostrar el modal con animación
     modal.style.display = 'flex';
     // Forzar reflow para que la animación funcione
@@ -38,15 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Si ya está inicializado, no hacer nada más
     if (isInitialized) {
-      console.log('Modal ya inicializado, mostrando formulario existente');
       return;
     }
 
     // Marcar como inicializado
     isInitialized = true;
-
-    console.log('Inicializando formulario de pago...');
-    console.log('PromoId:', form.dataset.promoId);
 
     // Llamar al backend para obtener el clientSecret
     try {
@@ -55,8 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ promoId: form.dataset.promoId }),
       });
-
-      console.log('Respuesta del servidor:', response.status);
 
       if (!response.ok) {
         const { error } = await response.json();
@@ -69,26 +61,21 @@ document.addEventListener('DOMContentLoaded', () => {
         throw new Error(backendError);
       }
 
-      console.log('ClientSecret obtenido, montando Stripe Elements...');
+      // IMPORTANTE: Limpiar el contenido del contenedor antes de montar Stripe
+      // Stripe no puede montar si hay nodos hijos en el elemento
+      elementsContainer.innerHTML = '';
 
       // Crear y montar el formulario de Stripe
       elements = stripe.elements({ clientSecret });
       const paymentElement = elements.create('payment');
 
-      // Cuando el formulario real esté listo para mostrarse...
-      paymentElement.on('ready', () => {
-        console.log('Stripe Elements listo');
-        // ...oculta el spinner
-        if (placeholder) placeholder.style.display = 'none';
-      });
-
-      // Monta el formulario en el div
+      // Monta el formulario en el div (ahora limpio)
       paymentElement.mount(elementsContainer);
 
     } catch (e) {
       console.error('Error al inicializar el formulario:', e);
-      if(placeholder) {
-        placeholder.innerHTML = `<span style="color: red;">Error: ${e.message}</span>`;
+      if(elementsContainer) {
+        elementsContainer.innerHTML = `<div style="color: red; padding: 1rem; text-align: center;">Error: ${e.message}</div>`;
       }
     }
   }
@@ -105,12 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Event listeners para abrir el modal
-  console.log('Botones "Apartar" encontrados:', allTriggerButtons.length);
-
-  allTriggerButtons.forEach((button, index) => {
+  allTriggerButtons.forEach(button => {
     button.addEventListener('click', (e) => {
       e.preventDefault();
-      console.log(`Click en botón ${index + 1}`);
       openModal();
     });
   });
