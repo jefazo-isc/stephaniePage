@@ -10,12 +10,55 @@
         h1 { color: var(--color-blue); }
         p { font-size: 1.2rem; }
         a { color: var(--color-light-blue); }
+
+        /* --- NUEVOS ESTILOS PARA DATOS DE PAGO --- */
+        .payment-details {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            padding: 1.5rem;
+            max-width: 550px;
+            margin: 2rem auto;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .payment-details h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .payment-details p {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            color: #555;
+            word-break: break-all;
+        }
+        .payment-details p strong {
+            color: #000;
+            display: inline-block;
+            min-width: 150px;
+        }
+        .loading-details {
+            font-style: italic;
+            color: #777;
+        }
+        .error-message {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        /* --- FIN DE NUEVOS ESTILOS --- */
+
     </style>
 </head>
 <body>
     <h1>¡Pago Exitoso!</h1>
     <p>Hemos recibido tu apartado de $500.00 MXN.</p>
     
+    <div id="payment-details" class="payment-details">
+        <h2>Resumen de tu Apartado</h2>
+        <div id="details-content">
+            <p class="loading-details">Cargando tus datos de transacción...</p>
+        </div>
+    </div>
     <br>
     
 <section id="whatsapp-agendar">
@@ -31,5 +74,61 @@
 </section>
 
 <a href="../index.html" class="cta">Volver al inicio</a>
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        
+        // Esta es tu clave PUBLICABLE de prueba (la misma de checkout.js)
+        const stripe = Stripe('pk_live_51SRzsBIKacSnSmO53KhqZC1tAwEgMYOU2V2o5WW2dEWZCe4BpiMARkHdhEC8HDiZhRXGRKSSrfKWdMx62tj917Ks00afZo71cn');
+
+        // 1. Obtener el client secret de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const clientSecret = urlParams.get('payment_intent_client_secret');
+        const detailsContainer = document.getElementById('details-content');
+
+        if (!clientSecret) {
+            detailsContainer.innerHTML = '<p class="error-message">Error: No se encontró el identificador de pago.</p>';
+            return;
+        }
+
+        try {
+            // 2. Recuperar el PaymentIntent desde Stripe (lado cliente)
+            const { paymentIntent, error } = await stripe.retrievePaymentIntent(clientSecret);
+
+            if (error) {
+                console.error(error);
+                detailsContainer.innerHTML = `<p class="error-message">Error al recuperar los datos: ${error.message}</p>`;
+                return;
+            }
+
+            // 3. Mostrar los datos si el pago fue exitoso
+            if (paymentIntent.status === 'succeeded') {
+                const billingDetails = paymentIntent.billing_details;
+                const paymentId = paymentIntent.id;
+
+                // Formatear el monto
+                const amount = (paymentIntent.amount / 100).toFixed(2);
+                const currency = paymentIntent.currency.toUpperCase();
+
+                detailsContainer.innerHTML = `
+                    <p><strong>ID de Transacción:</strong> ${paymentId}</p>
+                    <p><strong>Nombre:</strong> ${billingDetails.name || 'No proporcionado'}</p>
+                    <p><strong>Email:</strong> ${billingDetails.email || 'No proporcionado'}</p>
+                    <p><strong>Teléfono:</strong> ${billingDetails.phone || 'No proporcionado'}</p>
+                    <p><strong>Monto Pagado:</strong> ${amount} ${currency}</p>
+                    <p><strong>Estado:</strong> Exitoso</p>
+                `;
+            } else {
+                 detailsContainer.innerHTML = `<p class="error-message">El pago no se ha completado. Estado: ${paymentIntent.status}</p>`;
+            }
+
+        } catch (e) {
+            console.error(e);
+            detailsContainer.innerHTML = '<p class="error-message">Ocurrió un error inesperado al cargar los datos.</p>';
+        }
+    });
+</script>
 </body>
 </html>
