@@ -1774,22 +1774,21 @@ header .header-subtitle-custom {
 
 /*
  * ======================================
- * INICIO DEL PARCHE DE OPTIMIZACIÓN v2
+ * INICIO DEL PARCHE DE OPTIMIZACIÓN v3
  * ======================================
 */
 
 /*
  * ARREGLO DE CLS (LAYOUT SHIFT) Y DISTORSIÓN:
  * 'height: auto;' arregla la distorsión de las imágenes.
- * NOTA: Se ha quitado '.nav-center-promo .logoBuenFin img' de esta lista
- * porque su CSS original (height: 100%) es correcto y no debe ser sobreescrito.
+ * Se quitó el logo del Buen Fin de esta regla para que no se rompa.
 */
 nav .logo img,
 .promo-card .header-image,
 .promo-card .zones-grid .zone-item img,
 .doctor-photo img,
 .footer-logo img {
-  height: auto; /* ¡Esta es la corrección mágica! */
+  height: auto;
 }
 
 /*
@@ -1801,34 +1800,27 @@ nav .logo img,
 }
 
 /*
- * NUEVA REGLA: OCULTAR MENÚ EN MÓVIL
- * Oculta el logo, el botón de hamburguesa y el menú,
- * y centra la barra de cuenta regresiva en la vista móvil.
+ * NUEVA REGLA (¡CONDICIONAL!): OCULTAR MENÚ EN MÓVIL AL HACER SCROLL
+ * Esto solo se activa cuando JavaScript añade la clase '.nav-mobile-scrolled'
+ * al <nav> (es decir, en móvil Y después de 50px de scroll).
 */
 @media (max-width: 804px) {
-    /* Ocultar el logo en móvil */
-    nav .logo {
+    
+    /* Ocultar logo, hamburguesa y menú SOLO SI se ha scrolleado */
+    .nav-mobile-scrolled .logo,
+    .nav-mobile-scrolled .menu-toggle,
+    .nav-mobile-scrolled .nav-menu {
         display: none;
     }
 
-    /* Ocultar el botón de hamburguesa en móvil */
-    .menu-toggle {
-        display: none;
-    }
-
-    /* Ocultar el menú desplegable en móvil */
-    .nav-menu {
-        display: none;
-    }
-
-    /* Centrar la barra de navegación (que ahora solo tiene el countdown) */
-    nav {
+    /* Centrar el nav (que ahora solo tiene el countdown) SOLO SI se ha scrolleado */
+    .nav-mobile-scrolled {
         justify-content: center;
     }
     
-    /* Ajustar el contenedor del countdown para que se vea bien */
-    .nav-center-promo {
-        border-top: none; /* Quita la línea que lo separaba */
+    /* Ajustar el contenedor del countdown SOLO SI se ha scrolleado */
+    .nav-mobile-scrolled .nav-center-promo {
+        border-top: none;
         margin-top: 0;
         padding-top: 0;
     }
