@@ -1772,15 +1772,19 @@ header .header-subtitle-custom {
 }
 
 
+/*
+ * ======================================
+ * INICIO DEL PARCHE DE OPTIMIZACIÓN v2
+ * ======================================
+*/
 
 /*
  * ARREGLO DE CLS (LAYOUT SHIFT) Y DISTORSIÓN:
- * Estas reglas le dicen al navegador que respete el 'aspect-ratio' 
- * (dado por width/height en el HTML) pero que permita al CSS controlar el ancho. 
- * 'height: auto;' es la clave para evitar que las imágenes se distorsionen.
+ * 'height: auto;' arregla la distorsión de las imágenes.
+ * NOTA: Se ha quitado '.nav-center-promo .logoBuenFin img' de esta lista
+ * porque su CSS original (height: 100%) es correcto y no debe ser sobreescrito.
 */
 nav .logo img,
-.nav-center-promo .logoBuenFin img,
 .promo-card .header-image,
 .promo-card .zones-grid .zone-item img,
 .doctor-photo img,
@@ -1790,8 +1794,42 @@ nav .logo img,
 
 /*
  * OPTIMIZACIÓN DE ANIMACIÓN (PERFORMANCE):
- * Le dice al navegador que prepare los puntos para ser animados por la GPU.
+ * Prepara los puntos para la animación de la GPU.
 */
 .scroll-animated-dot {
   will-change: transform;
+}
+
+/*
+ * NUEVA REGLA: OCULTAR MENÚ EN MÓVIL
+ * Oculta el logo, el botón de hamburguesa y el menú,
+ * y centra la barra de cuenta regresiva en la vista móvil.
+*/
+@media (max-width: 804px) {
+    /* Ocultar el logo en móvil */
+    nav .logo {
+        display: none;
+    }
+
+    /* Ocultar el botón de hamburguesa en móvil */
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Ocultar el menú desplegable en móvil */
+    .nav-menu {
+        display: none;
+    }
+
+    /* Centrar la barra de navegación (que ahora solo tiene el countdown) */
+    nav {
+        justify-content: center;
+    }
+    
+    /* Ajustar el contenedor del countdown para que se vea bien */
+    .nav-center-promo {
+        border-top: none; /* Quita la línea que lo separaba */
+        margin-top: 0;
+        padding-top: 0;
+    }
 }
