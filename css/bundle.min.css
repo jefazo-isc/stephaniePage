@@ -1770,3 +1770,13 @@ header .header-subtitle-custom {
 		transition: none !important
 	}
 }
+
+/*
+ * OPTIMIZACIÓN DE ANIMACIÓN (PERFORMANCE):
+ * Le dice al navegador que prepare los puntos para ser animados por la GPU (compositor),
+ * evitando que la animación del scroll (hecha con JS) afecte al hilo principal.
+ * Esto soluciona la advertencia 'Avoid non-composited animations' de Lighthouse.
+*/
+.scroll-animated-dot {
+  will-change: transform;
+}
