@@ -1771,11 +1771,26 @@ header .header-subtitle-custom {
 	}
 }
 
+
+
+/*
+ * ARREGLO DE CLS (LAYOUT SHIFT) Y DISTORSIÓN:
+ * Estas reglas le dicen al navegador que respete el 'aspect-ratio' 
+ * (dado por width/height en el HTML) pero que permita al CSS controlar el ancho. 
+ * 'height: auto;' es la clave para evitar que las imágenes se distorsionen.
+*/
+nav .logo img,
+.nav-center-promo .logoBuenFin img,
+.promo-card .header-image,
+.promo-card .zones-grid .zone-item img,
+.doctor-photo img,
+.footer-logo img {
+  height: auto; /* ¡Esta es la corrección mágica! */
+}
+
 /*
  * OPTIMIZACIÓN DE ANIMACIÓN (PERFORMANCE):
- * Le dice al navegador que prepare los puntos para ser animados por la GPU (compositor),
- * evitando que la animación del scroll (hecha con JS) afecte al hilo principal.
- * Esto soluciona la advertencia 'Avoid non-composited animations' de Lighthouse.
+ * Le dice al navegador que prepare los puntos para ser animados por la GPU.
 */
 .scroll-animated-dot {
   will-change: transform;
