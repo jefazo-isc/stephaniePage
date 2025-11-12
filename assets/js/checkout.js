@@ -91,14 +91,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const elements = stripe.elements({ clientSecret });
 
         // --- MODIFICACIÓN AQUÍ ---
-        // Cambiamos 'always' por 'auto', como pide el error
+        // Desactivamos Link para forzar los campos de billing
         const paymentElementOptions = {
           fields: {
             billingDetails: {
-              phone: 'auto', // <-- CORREGIDO
-              name: 'auto',  // <-- CORREGIDO
-              email: 'auto' // <-- CORREGIDO
+              phone: 'auto',
+              name: 'auto',
+              email: 'auto'
             }
+          },
+          wallets: {
+            link: 'never' // <-- AÑADIMOS ESTO PARA DESACTIVAR LINK
           },
           layout: 'tabs'
         };
