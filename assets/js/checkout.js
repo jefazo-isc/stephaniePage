@@ -87,31 +87,32 @@ document.addEventListener('DOMContentLoaded', () => {
           throw new Error(backendError);
         }
 
+        // 4.5 Crear campos de billing personalizados
+        const billingFieldsHTML = `
+          <div class="billing-details-section" style="margin-bottom: 1.5rem;">
+            <h4 style="margin-bottom: 1rem; color: #333; font-size: 1rem;">Información de contacto</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <input type="text" id="billing-name" class="billing-input" placeholder="Nombre completo" required
+                style="padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+              <input type="email" id="billing-email" class="billing-input" placeholder="Email" required
+                style="padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+              <input type="tel" id="billing-phone" class="billing-input" placeholder="Teléfono (10 dígitos)" required
+                pattern="[0-9]{10}" style="padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+            </div>
+          </div>
+        `;
+
+        // Insertar los campos antes del payment-element
+        elementsContainer.insertAdjacentHTML('beforebegin', billingFieldsHTML);
+
         // 5. Crear y montar el formulario de Stripe (solo una vez)
-        const elements = stripe.elements({
-          clientSecret,
-          defaultValues: {
-            billingDetails: {
-              name: '',
-              email: '',
-              phone: ''
-            }
-          }
-        });
+        const elements = stripe.elements({ clientSecret });
 
         // --- MODIFICACIÓN AQUÍ ---
-        // Desactivamos Link para forzar los campos de billing
+        // Desactivamos Link
         const paymentElementOptions = {
-          fields: {
-            billingDetails: {
-              address: 'auto',
-              phone: 'auto',
-              name: 'auto',
-              email: 'auto'
-            }
-          },
           wallets: {
-            link: 'never' // <-- AÑADIMOS ESTO PARA DESACTIVAR LINK
+            link: 'never'
           },
           layout: 'tabs'
         };
@@ -151,6 +152,23 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
           }
 
+          // Capturar billing details de los inputs personalizados
+          const billingName = document.getElementById('billing-name');
+          const billingEmail = document.getElementById('billing-email');
+          const billingPhone = document.getElementById('billing-phone');
+
+          // Validar que los campos estén completos
+          if (!billingName?.value || !billingEmail?.value || !billingPhone?.value) {
+            showMessage(instance.messageContainer, 'Por favor completa todos los campos de contacto.');
+            return;
+          }
+
+          // Validar formato de teléfono (10 dígitos)
+          if (!/^[0-9]{10}$/.test(billingPhone.value)) {
+            showMessage(instance.messageContainer, 'El teléfono debe tener 10 dígitos.');
+            return;
+          }
+
           setLoading(instance.submitButton, instance.buttonText, true);
 
           try {
@@ -160,6 +178,13 @@ document.addEventListener('DOMContentLoaded', () => {
               elements: instance.elements,
               confirmParams: {
                 return_url: returnUrl,
+                payment_method_data: {
+                  billing_details: {
+                    name: billingName.value,
+                    email: billingEmail.value,
+                    phone: billingPhone.value
+                  }
+                }
               },
             });
 
