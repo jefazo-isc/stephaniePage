@@ -90,22 +90,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // 5. Crear y montar el formulario de Stripe (solo una vez)
         const elements = stripe.elements({ clientSecret });
 
-        // --- TU MODIFICACIÓN (YA SIN CONFLICTO) ---
-        // Opciones para el Payment Element
+        // --- MODIFICACIÓN AQUÍ ---
+        // Cambiamos 'always' por 'auto', como pide el error
         const paymentElementOptions = {
           fields: {
             billingDetails: {
-              phone: 'always', // <-- HACE OBLIGATORIO EL TELÉFONO
-              name: 'always',  // <-- Buena práctica para rastreo
-              email: 'always' // <-- Buena práctica para rastreo
+              phone: 'auto', // <-- CORREGIDO
+              name: 'auto',  // <-- CORREGIDO
+              email: 'auto' // <-- CORREGIDO
             }
           },
-          layout: 'tabs' // 'tabs' o 'accordion' suele ser mejor que 'default'
+          layout: 'tabs'
         };
         
         // Pasamos las opciones al crear el elemento
         const paymentElement = elements.create('payment', paymentElementOptions);
         // --- FIN DE LA MODIFICACIÓN ---
+
 
         // Cuando el formulario real esté listo para mostrarse...
         paymentElement.on('ready', () => {
