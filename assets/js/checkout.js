@@ -169,6 +169,14 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
           }
 
+          // Limpiar mensajes de error previos
+          showMessage(instance.messageContainer, '');
+
+          // Bloquear cierre del modal durante procesamiento
+          if (window.PaymentModal) {
+            window.PaymentModal.setProcessing(true);
+          }
+
           setLoading(instance.submitButton, instance.buttonText, true);
 
           try {
@@ -188,19 +196,39 @@ document.addEventListener('DOMContentLoaded', () => {
               },
             });
 
-            if (error.type === 'card_error' || error.type === 'validation_error') {
-              showMessage(instance.messageContainer, error.message);
-            } else if (error) {
-              showMessage(instance.messageContainer, 'Un error inesperado ocurrió.');
+            if (error) {
+              // Mostrar error más prominente
+              let errorMessage = 'Un error inesperado ocurrió.';
+
+              if (error.type === 'card_error' || error.type === 'validation_error') {
+                errorMessage = error.message;
+              }
+
+              showMessage(instance.messageContainer, '⚠️ ' + errorMessage);
+              instance.messageContainer.style.color = '#d9534f';
+              instance.messageContainer.style.backgroundColor = '#fee';
+              instance.messageContainer.style.padding = '0.75rem';
+              instance.messageContainer.style.borderRadius = '4px';
+              instance.messageContainer.style.marginTop = '0.75rem';
             }
 
           } catch (integrationError) {
             console.error(integrationError);
-            showMessage(instance.messageContainer, integrationError.message);
+            showMessage(instance.messageContainer, '⚠️ ' + integrationError.message);
+            instance.messageContainer.style.color = '#d9534f';
+            instance.messageContainer.style.backgroundColor = '#fee';
+            instance.messageContainer.style.padding = '0.75rem';
+            instance.messageContainer.style.borderRadius = '4px';
+            instance.messageContainer.style.marginTop = '0.75rem';
+          }
+
+          // Desbloquear cierre del modal
+          if (window.PaymentModal) {
+            window.PaymentModal.setProcessing(false);
           }
 
           setLoading(instance.submitButton, instance.buttonText, false);
-        }, { once: true }); // Solo agregar el listener una vez
+        }); // Permitir múltiples intentos de pago
 
       } catch (e) {
          if(placeholder) placeholder.textContent = `Error: ${e.message}`;

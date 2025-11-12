@@ -7,6 +7,7 @@
   let currentModal = null;
   let currentForm = null;
   let currentPromoInfo = null;
+  let isProcessing = false; // Flag to prevent closing during payment processing
 
   /**
    * Initialize modal functionality
@@ -22,19 +23,23 @@
     // Close button click
     const closeButton = modalOverlay.querySelector('.modal-close');
     if (closeButton) {
-      closeButton.addEventListener('click', closeModal);
+      closeButton.addEventListener('click', function() {
+        if (!isProcessing) {
+          closeModal();
+        }
+      });
     }
 
     // Backdrop click (click outside modal content)
     modalOverlay.addEventListener('click', function(e) {
-      if (e.target === modalOverlay || e.target.classList.contains('modal-container')) {
+      if ((e.target === modalOverlay || e.target.classList.contains('modal-container')) && !isProcessing) {
         closeModal();
       }
     });
 
     // ESC key to close
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+      if (e.key === 'Escape' && modalOverlay.classList.contains('active') && !isProcessing) {
         closeModal();
       }
     });
@@ -149,6 +154,28 @@
     return modalOverlay?.classList.contains('active') || false;
   }
 
+  /**
+   * Set processing state (prevents closing during payment)
+   */
+  function setProcessing(processing) {
+    isProcessing = processing;
+    const modalOverlay = document.getElementById('payment-modal');
+    if (modalOverlay) {
+      if (processing) {
+        modalOverlay.classList.add('processing');
+      } else {
+        modalOverlay.classList.remove('processing');
+      }
+    }
+  }
+
+  /**
+   * Get current processing state
+   */
+  function getProcessingState() {
+    return isProcessing;
+  }
+
   // Initialize when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initModal);
@@ -161,7 +188,9 @@
     open: openModal,
     close: closeModal,
     getModalBody: getModalBody,
-    isOpen: isModalOpen
+    isOpen: isModalOpen,
+    setProcessing: setProcessing,
+    isProcessing: getProcessingState
   };
 
 })();
