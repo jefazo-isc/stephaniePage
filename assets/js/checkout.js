@@ -88,7 +88,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 5. Crear y montar el formulario de Stripe (solo una vez)
-        const elements = stripe.elements({ clientSecret });
+        const elements = stripe.elements({
+          clientSecret,
+          defaultValues: {
+            billingDetails: {
+              name: '',
+              email: '',
+              phone: ''
+            }
+          }
+        });
 
         // --- MODIFICACIÓN AQUÍ ---
         // Desactivamos Link para forzar los campos de billing
