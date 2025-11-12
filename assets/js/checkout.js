@@ -95,9 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const paymentElementOptions = {
           fields: {
             billingDetails: {
-              phone: 'auto',
-              name: 'auto',
-              email: 'auto'
+              phone: 'always',
+              name: 'always',
+              email: 'always'
             }
           },
           wallets: {
