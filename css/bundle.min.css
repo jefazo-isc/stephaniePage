@@ -1125,7 +1125,7 @@ footer {
 	font-size: 3rem;
 	font-weight: 700;
 	font-family: var(--font-hatton-bold);
-	color: var(--color-yellow-light);
+	color: red;
 	line-height: 1
 }
 
@@ -1283,13 +1283,13 @@ header .header-subtitle-custom {
 .nav-countdown-item {
 	font-family: var(--font-hatton-bold);
 	font-size: 1.1rem;
-	color: var(--color-yellow-light)
+	color: red;
 }
 
 .nav-countdown-item span {
 	font-family: var(--font-hatton-bold);
 	font-size: 1.1rem;
-	color: var(--color-yellow-light);
+	color: red;
 	margin-right: .25rem
 }
 
