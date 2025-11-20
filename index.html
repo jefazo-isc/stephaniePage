@@ -4,18 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>ROME Harmony Clinic</title>
+    <title>ROME Harmony Clinic - Especial Navidad</title>
 
-    <meta name="description" content="Descubre promociones en armonización facial, ácido hialurónico y botox en ROME Harmony Clinic. Realza tu belleza con nosotros.">
+    <meta name="description" content="Descubre promociones navideñas en armonización facial, ácido hialurónico y botox en ROME Harmony Clinic.">
 
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-
-    <meta property="og:title" content="ROME Harmony Clinic - Promociones Buen Fin">
-    <meta property="og:description" content="Aprovecha nuestras ofertas en armonización facial, 2 zonas, botox y más.">
-    <meta property="og:image" content="https://www.TU-DOMINIO-FINAL.com/assets/img/cards/antifaz.webp">
-    <meta property="og:url" content="https://www.TU-DOMINIO-FINAL.com">
-    <meta property="og:type" content="website">
     
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://js.stripe.com" crossorigin>
@@ -31,163 +25,109 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></noscript>
 
+    <style>
+        :root {
+            --christmas-red: #b3000c;
+            --christmas-gold: #c5a059;
+        }
+        /* Ajustes al Hero y Textos */
+        .hero h2 { color: var(--color-yellow-light); text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .hero h1 { text-shadow: 0 2px 10px rgba(179, 0, 12, 0.6); }
+        
+        /* Ajustes a las Ofertas */
+        .best-offer { border-color: var(--christmas-gold); }
+        .best-offer-badge {
+            background: linear-gradient(135deg, var(--christmas-red) 0%, #ff4d4d 100%);
+            color: white;
+            border: 1px solid white;
+        }
+        
+        /* Decoración Navideña sutil en encabezados */
+        .section-header h2::after, .section-header h2::before {
+            background: linear-gradient(90deg, transparent, var(--christmas-red), transparent);
+        }
+        
+        /* Mensaje en nav */
+        .nav-center-promo { 
+            color: white; 
+            font-family: var(--font-hatton-medium); 
+            font-size: 1.2rem; 
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+        
+        /* Asegurar que el contenido siempre se vea */
+        .buen-fin-content { display: block !important; }
+        
+        /* Ocultar elementos viejos si quedara caché */
+        .countdown-section, .logoBuenFin { display: none !important; }
+    </style>
 </head>
 
 <body>
 
     <nav>
         <div class="logo">
-                <img src="assets/img/rome.webp" alt="ROME Harmony Clinic" width="2598" height="1360"> </div>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#promociones">Promociones</a></li>
-                <li><a href="#paquetes">Paquetes</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-        </ul>
+            <img src="assets/img/rome.webp" alt="ROME Harmony Clinic" width="2598" height="1360">
+        </div>
         
-        <div class="nav-center-promo buen-fin-content">
-            <div class="logoBuenFin">
-                <img src="assets/img/logoBuenFin.min.svg" alt="Logo Oficial Buen Fin" width="100" height="40">
-            </div>
-            <div class="nav-countdown-wrapper">
-                <span class="nav-countdown-text js-countdown-text"></span>
-                <div class="nav-countdown">
-                    <span class="nav-countdown-item"><span class="js-dias">0</span>d</span>
-                    <span class="nav-countdown-item"><span class="js-horas">0</span>h</span>
-                    <span class="nav-countdown-item"><span class="js-minutos">0</span>m</span>
-                    <span class="nav-countdown-item"><span class="js-segundos">0</span>s</span>
-                </div>
-            </div>
+        <div class="nav-center-promo">
+            <span>✨ Holiday Specials ✨</span>
         </div>
 
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="#promociones">Promociones</a></li>
+            <li><a href="#doctora">Doctora</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
     </nav>
 
     <header>
         <div class="background-glow-container">
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-
+            <div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div>
+            <div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div>
+            <div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div>
+            <div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div>
+            <div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div>
         </div>
         
         <div class="hero">
-            <h2>Celebra tu belleza única</h2>
-            <h1>Siéntete imparable</h1>
-            <a href="#promociones" class="cta">Ver Promociones</a> </div>
-        
-        <div class="countdown-section">
-            <div class="countdown">
-                <div class="countdown-item">
-                    <span class="countdown-number js-dias"></span>
-                    <span class="countdown-label">Días</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number js-horas"></span>
-                    <span class="countdown-label">Horas</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number js-minutos"></span>
-                    <span class="countdown-label">Minutos</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number js-segundos"></span>
-                    <span class="countdown-label">Segundos</span>
-                </div>
-            </div>
-            <p class="countdown-text js-countdown-text"></p>
+            <h2>Regala belleza eterna</h2>
+            <h1>Brilla esta Navidad</h1>
+            <a href="#promociones" class="cta">Ver Regalos</a>
         </div>
-        <br>
-        <h2 class="header-subtitle-custom">Tratamientos que realzan tu belleza natural y elevan tu confianza</h2>
+        
+        <br><br>
+        <h2 class="header-subtitle-custom">Tratamientos exclusivos para cerrar el año espectacularmente</h2>
     </header>
 
     <main>
-        <section id="promociones" class="buen-fin-content">
+        <section id="promociones">
 
             <div class="section-header">
-                <h2>Promociones de Buen Fin</h2>
-
+                <h2>Promociones Navideñas</h2>
+                <p class="section-description">Válidas durante Diciembre y Enero</p>
             </div>
-            <h2 class="category-title">Jeringas*</h2>
+            
             <div class="promo-container">
                 
                 <div class="promo-card">
                     <div class="header-image-container">
-                        <img src="assets/img/cards/jeringa1.webp" alt="Jeringa corta duración" class="header-image" loading="lazy" decoding="async" width="1351" height="901"> <div class="header-overlay">
+                        <img src="assets/img/cards/jeringa4.webp" alt="Jeringa larga duración" class="header-image" loading="lazy" decoding="async" width="659" height="824">
+                        <div class="header-overlay">
                             <p class="promo-title">1 Jeringa</p>
-                            <p class="promo-subtitle">Corta duración</p>
+                            <p class="promo-subtitle">Larga duración</p>
                         </div>
                     </div>
                     <div class="content-section">
                         <div class="discount-section">
                             <p class="price-info price-info-center">
-                                <span class="new-price new-price-large">$4,500.00<sup>**</sup></span>
+                                <span class="new-price new-price-large">$5,500.00<sup>**</sup></span>
                             </p>
                         </div>
                         
@@ -205,14 +145,14 @@
                           </button>
                           <div class="payment-message" role="alert"></div>
                         </form>
-                        
                     </div>
                 </div>
 
                 <div class="promo-card best-offer">
-                    <div class="best-offer-badge">MEJOR OFERTA</div>
+                    <div class="best-offer-badge">FAVORITO NAVIDEÑO</div>
                     <div class="header-image-container">
-                        <img src="assets/img/cards/jeringa5.webp" alt="2 Jeringas larga duración" class="header-image" loading="lazy" decoding="async" width="1395" height="930"> <div class="header-overlay">
+                        <img src="assets/img/cards/jeringa5.webp" alt="2 Jeringas larga duración" class="header-image" loading="lazy" decoding="async" width="1395" height="930">
+                        <div class="header-overlay">
                             <p class="promo-title">2 Jeringas</p>
                             <p class="promo-subtitle">Larga duración</p>
                         </div>
@@ -243,88 +183,14 @@
                           </button>
                           <div class="payment-message" role="alert"></div>
                         </form>
-                
-                    </div>
-                </div>
-                
-                <div class="promo-card">
-                    <div class="header-image-container">
-                        <img src="assets/img/cards/jeringa4.webp" alt="Jeringa larga duración" class="header-image" loading="lazy" decoding="async" width="659" height="824"> <div class="header-overlay">
-                            <p class="promo-title">1 Jeringa</p>
-                            <p class="promo-subtitle">Larga duración</p>
-                        </div>
-                    </div>
-                    <div class="content-section">
-                        <div class="discount-section">
-                            <p class="price-info price-info-center">
-                                <span class="new-price new-price-large">$5,500.00<sup>**</sup></span>
-                            </p>
-                        </div>
-                        
-                        <button class="cta-mostrar-form interest-button" style="width: 100%;">Apartar con $500.00 MXN</button>
-                        
-                        <form class="payment-form" data-promo-id="apartado-500" style="display: none;">
-                          <div class="payment-element">
-                            <div class="payment-element-placeholder">
-                                <div class="spinner"></div>
-                                <span>Cargando método de pago...</span>
-                            </div>
-                          </div>
-                          <button class="submit-button interest-button" style="width: 100%;">
-                            <span class="button-text">Pagar $500.00 MXN</span>
-                          </button>
-                          <div class="payment-message" role="alert"></div>
-                        </form>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="buen-fin-content">
-            <div class="promo-container">
-                
-                <div class="promo-card">
-                    <div class="header-image-container">
-                        <img src="assets/img/cards/jeringa2.webp" alt="2 Jeringas corta duración" class="header-image" loading="lazy" decoding="async" width="1504" height="1004"> <div class="header-overlay">
-                            <p class="promo-title">2 Jeringas</p>
-                            <p class="promo-subtitle">Corta duración</p>
-                        </div>
-                    </div>
-                    <div class="content-section">
-                        <div class="discount-section">
-                            <div>
-                                <span class="discount-percentage">27%</span> 
-                                <span class="discount-text">DE<br>DSCTO.</span>
-                            </div>
-                            <p class="price-info">
-                                <span class="old-price">$9,000.00</span>
-                                <span class="new-price">$6,500.00<sup>**</sup></span>
-                            </p>
-                        </div>
-                        
-                        <button class="cta-mostrar-form interest-button" style="width: 100%;">Apartar con $500.00 MXN</button>
-                        
-                        <form class="payment-form" data-promo-id="apartado-500" style="display: none;">
-                          <div class="payment-element">
-                            <div class="payment-element-placeholder">
-                                <div class="spinner"></div>
-                                <span>Cargando método de pago...</span>
-                            </div>
-                          </div>
-                          <button class="submit-button interest-button" style="width: 100%;">
-                            <span class="button-text">Pagar $500.00 MXN</span>
-                          </button>
-                          <div class="payment-message" role="alert"></div>
-                        </form>
-                        
                     </div>
                 </div>
 
                 <div class="promo-card">
                     <div class="header-image-container">
-                        <img src="assets/img/cards/jeringa3.webp" alt="Colageno Bioestimulador" class="header-image" loading="lazy" decoding="async" width="1988" height="1326"> <div class="header-overlay">
-                            <p class="promo-title">Colageno</p>
+                        <img src="assets/img/cards/jeringa3.webp" alt="Colageno Bioestimulador" class="header-image" loading="lazy" decoding="async" width="1988" height="1326">
+                        <div class="header-overlay">
+                            <p class="promo-title">Colágeno</p>
                             <p class="promo-subtitle">Bioestimulador</p>
                         </div>
                     </div>
@@ -354,14 +220,13 @@
                           </button>
                           <div class="payment-message" role="alert"></div>
                         </form>
-                        
                     </div>
                 </div>
-                
 
                 <div class="promo-card">
                     <div class="header-image-container">
-                        <img src="assets/img/cards/antifaz.webp" alt="Botox 3 zonas" class="header-image" loading="lazy" decoding="async" width="923" height="996"> <div class="header-overlay">
+                        <img src="assets/img/cards/antifaz.webp" alt="Botox 3 zonas" class="header-image" loading="lazy" decoding="async" width="923" height="996">
+                        <div class="header-overlay">
                             <p class="promo-title">Botox 3 Zonas</p>
                             <p class="promo-subtitle">(Antifaz)</p>
                         </div>
@@ -392,208 +257,40 @@
                           </button>
                           <div class="payment-message" role="alert"></div>
                         </form>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-        
-        <section id="paquetes" class="buen-fin-content">
-            <div class="section-header">
-                <h2>Paquetes</h2>
-                <p class="section-description">Combinaciones perfectas para resultados espectaculares</p>
-            </div>
-            <div class="promo-container">
-    
-                <div class="promo-card">
-                    <div class="header-image-container">
-                        <img src="assets/img/cards/anti envejecimiento.webp" alt="Paquete Anti Envejecimiento" class="header-image" loading="lazy" decoding="async" width="1440" height="960"> <div class="header-overlay">
-                            <p class="promo-title">Anti Envejecimiento</p>
-                        </div>
-                    </div>
-                    <div class="content-section">
-                        <p class="section-title">Obtienes</p>
-                        <div class="zones-grid">
-                            <div class="zone-item"><img src="assets/img/icons/inyeccion.webp" alt="Icono inyección" loading="lazy" decoding="async" width="512" height="512"></div>
-                            <div class="zone-item"><img src="assets/img/icons/botox2.webp" alt="Icono botox" loading="lazy" decoding="async" width="512" height="512"></div> 
-                        </div>
-                        <p class="zones-description">
-                            Botox + Colageno
-                        </p>
-                        <div class="discount-section">
-                                <div>
-                                <span class="discount-percentage">24%</span> 
-                                <span class="discount-text">DE<br>DSCTO.</span>
-                            </div>
-                            <p class="price-info">
-                                <span class="old-price">$17,000</span>
-                                <span class="new-price">$12,900</span>
-                            </p>
-                        </div>
-                        
-                        <button class="cta-mostrar-form interest-button" style="width: 100%;">Apartar con $500.00 MXN</button>
-
-                        <form class="payment-form" data-promo-id="apartado-500" style="display: none;">
-                          <div class="payment-element">
-                            <div class="payment-element-placeholder">
-                                <div class="spinner"></div>
-                                <span>Cargando método de pago...</span>
-                            </div>
-                          </div>
-                          <button class="submit-button interest-button" style="width: 100%;">
-                            <span class="button-text">Pagar $500.00 MXN</span>
-                          </button>
-                          <div class="payment-message" role="alert"></div>
-                        </form>
-
                     </div>
                 </div>
 
-                <div class="promo-card">
-                    <div class="header-image-container">
-                        <img src="assets/img/cards/perfil.webp" alt="Paquete Perfil Facial" class="header-image" loading="lazy" decoding="async" width="1006" height="1079"> <div class="header-overlay">
-                            <p class="promo-title">Perfil</p>
-                            <p class="promo-subtitle">3 jeringas larga duración</p>
-                            <div class="duration-tag">Duración de 12 a 14 meses</div>
-                        </div>
-                    </div>
-                    <div class="content-section">
-                        <p class="section-title">Obtienes</p>
-                        <div class="zones-grid">
-                            <div class="zone-item"><img src="assets/img/icons/lips.webp" alt="Icono labios" loading="lazy" decoding="async" width="512" height="512"></div>
-                            <div class="zone-item"><img src="assets/img/icons/nose.webp" alt="Icono nariz" loading="lazy" decoding="async" width="512" height="512"></div>
-                            <div class="zone-item"><img src="assets/img/icons/chin.webp" alt="Icono mentón" loading="lazy" decoding="async" width="512" height="512"></div>
-                        </div>
-                        <p class="zones-description">
-                            Labios, nariz y mentón
-                        </p>
-                        <div class="discount-section">
-                                <div>
-                                <span class="discount-percentage">30%</span> 
-                                <span class="discount-text">DE<br>DSCTO.</span>
-                            </div>
-                            <p class="price-info">
-                                <span class="old-price">$18,000</span>
-                                <span class="new-price">$12,500</span>
-                            </p>
-                        </div>
-                        
-                        <button class="cta-mostrar-form interest-button" style="width: 100%;">Apartar con $500.00 MXN</button>
-
-                        <form class="payment-form" data-promo-id="apartado-500" style="display: none;">
-                          <div class="payment-element">
-                            <div class="payment-element-placeholder">
-                                <div class="spinner"></div>
-                                <span>Cargando método de pago...</span>
-                            </div>
-                          </div>
-                          <button class="submit-button interest-button" style="width: 100%;">
-                            <span class="button-text">Pagar $500.00 MXN</span>
-                          </button>
-                          <div class="payment-message" role="alert"></div>
-                        </form>
-
-                    </div>
-                </div>
-
-                <div class="promo-card">
-                    <div class="header-image-container">
-                        <img src="assets/img/cards/armonizacion.webp" alt="Paquete Armonización Facial" class="header-image" loading="lazy" decoding="async" width="1440" height="960"> <div class="header-overlay">
-                            <p class="promo-title">Paquete Armonización Facial</p>
-                            <p class="promo-subtitle"> 6 jeringas larga duración</p>
-                            <div class="duration-tag">Duración de 12 a 14 meses</div>
-                        </div>
-                    </div>
-                    <div class="content-section">
-                        <p class="section-title">Obtienes</p>
-                        <div class="zones-grid">
-                            <div class="zone-item"><img src="assets/img/icons/lips.webp" alt="Icono labios" loading="lazy" decoding="async" width="512" height="512"></div>
-                            <div class="zone-item"><img src="assets/img/icons/nose.webp" alt="Icono nariz" loading="lazy" decoding="async" width="512" height="512"></div>
-                            <div class="zone-item"><img src="assets/img/icons/chin.webp" alt="Icono mentón" loading="lazy" decoding="async" width="512" height="512"></div>
-                            <div class="zone-item"><img src="assets/img/icons/botox.webp" alt="Icono pómulo" loading="lazy" decoding="async" width="512" height="512"></div> 
-                        </div>
-                        <p class="zones-description">
-                            Labios, nariz, mentón, pómulo, marcaje mandibular + botox de regalo<sup>***</sup>
-                        </p> <div class="discount-section">
-                            <div>
-                                <span class="discount-percentage">18%</span> 
-                                <span class="discount-text">DE<br>DSCTO.</span>
-                            </div>
-                            <p class="price-info">
-                                <span class="old-price">$30,000</span>
-                                <span class="new-price">$24,500</span>
-                            </p>
-                        </div>
-                        
-                        <button class="cta-mostrar-form interest-button" style="width: 100%;">Apartar con $500.00 MXN</button>
-
-                        <form class="payment-form" data-promo-id="apartado-500" style="display: none;">
-                          <div class="payment-element">
-                            <div class="payment-element-placeholder">
-                                <div class="spinner"></div>
-                                <span>Cargando método de pago...</span>
-                            </div>
-                          </div>
-                          <button class="submit-button interest-button" style="width: 100%;">
-                            <span class="button-text">Pagar $500.00 MXN</span>
-                          </button>
-                          <div class="payment-message" role="alert"></div>
-                        </form>
-
-                    </div>
-                </div>
-    
             </div>
         </section>
     </main>
 
-    <section id="disclaimer" class="buen-fin-content">
+    <section id="disclaimer">
         <div class="disclaimer-container">
             <h3 class="disclaimer-title">Información Importante</h3>
-            <p class="disclaimer-subtitle">Conoce los detalles de nuestras promociones</p>
+            <p class="disclaimer-subtitle">Detalles de la promoción de temporada</p>
 
             <div class="disclaimer-grid">
                 <div class="disclaimer-item">
-                    <div class="disclaimer-icon">
-                        <i class="fas fa-user-check"></i>
-                    </div>
+                    <div class="disclaimer-icon"><i class="fas fa-user-check"></i></div>
                     <div class="disclaimer-content">
                         <span class="disclaimer-badge">*</span>
-                        <p>Promociones válidas por paciente (no se pueden compartir jeringas). Personales e intransferibles.</p>
+                        <p>Promociones válidas por paciente. Personales e intransferibles.</p>
                     </div>
                 </div>
 
                 <div class="disclaimer-item">
-                    <div class="disclaimer-icon">
-                        <i class="fas fa-money-bill-wave"></i>
-                    </div>
+                    <div class="disclaimer-icon"><i class="fas fa-money-bill-wave"></i></div>
                     <div class="disclaimer-content">
                         <span class="disclaimer-badge">**</span>
-                        <p>Precios en MXN. Promociones se apartan con un <strong>anticipo de $500 MXN</strong>. Pago restante (liquidación) en <strong>efectivo</strong> al acudir a la cita.</p>
-                    </div>
-                </div>
-
-                <div class="disclaimer-item">
-                    <div class="disclaimer-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="disclaimer-content">
-                        <span class="disclaimer-badge">***</span>
-                        <p>Sujeto a disponibilidad y valoración médica. No acumulable con otras ofertas.</p>
+                        <p>Precios en MXN. Se aparta con <strong>$500 MXN</strong>. Pago restante en <strong>efectivo</strong> el día de la cita.</p>
                     </div>
                 </div>
 
                 <div class="disclaimer-item disclaimer-item-highlight">
-                    <div class="disclaimer-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
+                    <div class="disclaimer-icon"><i class="fas fa-calendar-alt"></i></div>
                     <div class="disclaimer-content">
-                        <span class="disclaimer-badge">****</span>
-                        <p>Promociones válidas para apartar desde el 11 al 18 de noviembre de 2025. Al hacer su cita, acepta nuestros
-                            <a href="pages/terminos-y-condiciones.html">términos y condiciones</a> y
-                            <a href="pages/aviso-de-privacidad.html">aviso de privacidad</a>
-                        </p>
+                        <span class="disclaimer-badge">Vigencia</span>
+                        <p>Promociones válidas para apartar durante Diciembre y Enero. Consulta <a href="pages/terminos-y-condiciones.html">términos y condiciones</a>.</p>
                     </div>
                 </div>
             </div>
@@ -603,7 +300,8 @@
     <section id="doctora" class="doctor-section">
         <div class="doctor-container">
             <div class="doctor-photo">
-                <img src="assets/img/doc.webp" alt="Doctora Corazón" loading="lazy" decoding="async" width="1202" height="1600"> </div>
+                <img src="assets/img/doc.webp" alt="Doctora Corazón" loading="lazy" decoding="async" width="1202" height="1600">
+            </div>
             <div class="doctor-info">
                 <h2>Conoce a quien realiza tus procedimientos</h2>
                 <h3>Dra. Corazón</h3>
@@ -617,51 +315,15 @@
 
    <footer id="contacto">
         <div class="background-glow-container">
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
-            <div class="glow-dot scroll-animated-dot"></div>
+            <div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div>
+            <div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div>
+            <div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div><div class="glow-dot scroll-animated-dot"></div>
         </div>
 
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="assets/img/rome.webp" alt="ROME Harmony Clinic" loading="lazy" decoding="async" width="2598" height="1360"> </div>
+                <img src="assets/img/rome.webp" alt="ROME Harmony Clinic" loading="lazy" decoding="async" width="2598" height="1360">
+            </div>
 
             <h2>Contáctanos</h2>
             <p>Agenda tu cita y déjanos realzar tu belleza.</p>
@@ -692,7 +354,6 @@
                 <a href="pages/aviso-de-privacidad.html">Aviso de Privacidad</a>
             </div>
             <div class="footer-copyright">
-                <p>-Hecho con ❤️ por Lightbox Mercadotenia</p>
                 <p>© 2025 ROME Harmony Clinic. Todos los derechos reservados.</p>
             </div>
         </div>
@@ -703,7 +364,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title">Apartar Promoción</h3>
-                    <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+                    <button class="modal-close" aria-label="Cerrar modal">×</button>
                 </div>
                 <div class="modal-body">
                     <div class="modal-promo-info">
@@ -713,7 +374,7 @@
                     <p class="modal-payment-description">
                         Completa tu pago de <strong>$500.00 MXN</strong> para apartar esta promoción. El saldo restante se paga en efectivo al acudir a tu cita.
                     </p>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -721,7 +382,7 @@
     <script src="https://js.stripe.com/v3/"></script>
     <script src="assets/js/bundle.min.js"></script>
     <script src="assets/js/modal.js"></script>
-<script src="assets/js/checkout.js?v=2"></script>
+    <script src="assets/js/checkout.js?v=2"></script>
 
 </body>
 </html>
